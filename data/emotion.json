@@ -1,0 +1,26 @@
+{
+    "esperanza": {
+        "title": "Esperanza",
+        "description": "La esperanza es la emoción que nos motiva a proyectarnos hacia el futuro con optimismo. Nos impulsa a confiar en el cambio y visualizar posibilidades que nos inspiran."
+    },
+    "alegria": {
+        "title": "Alegría",
+        "description": "La alegría nos brinda momentos de felicidad y satisfacción con la vida. Es una emoción positiva que nos conecta con el presente."
+    },
+    "calma": {
+        "title": "Calma",
+        "description": "La calma nos permite mantenernos en paz en situaciones de tranquilidad. Nos ayuda a encontrar un equilibrio interior y a disfrutar de momentos de serenidad."
+    },
+    "tristeza": {
+        "title": "Tristeza",
+        "description": "La tristeza refleja la emoción ante las pérdidas y nos ayuda a sanar. Es una emoción que nos permite conectar con nuestra vulnerabilidad."
+    },
+    "rabia": {
+        "title": "Rabia",
+        "description": "La rabia nos da fuerza para enfrentar las injusticias y cambios. Es una emoción que nos motiva a actuar y buscar soluciones."
+    },
+    "ansiedad": {
+        "title": "Ansiedad",
+        "description": "La ansiedad es una señal de alerta para buscar calma y seguridad. Nos recuerda la importancia de cuidar de nuestra salud mental y emocional."
+    }
+}

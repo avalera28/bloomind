@@ -1,0 +1,72 @@
+/* EB Garamond Regular */
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../assets/fonts/EB_Garamond/EBGaramond-Regular.woff2') format('woff2'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-Regular.woff') format('woff'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* EB Garamond Italic */
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../assets/fonts/EB_Garamond/EBGaramond-Italic.woff2') format('woff2'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-Italic.woff') format('woff'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* EB Garamond SemiBold */
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../assets/fonts/EB_Garamond/EBGaramond-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-SemiBold.woff') format('woff'),
+        url('../assets/fonts/EB_Garamond/EBGaramond-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Island Moments */
+@font-face {
+    font-family: 'Island Moments';
+    src: url('../assets/fonts/Island_Moments/IslandMoments-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Island_Moments/IslandMoments-Regular.woff') format('woff'),
+        url('../assets/fonts/Island_Moments/IslandMoments-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Colores base */
+    --color-background: #F2EDE4;
+    --color-primary: #0C0D0B;
+    --color-secondary: #D9483B;
+    --color-text: #0C0D0B;
+    --color-textlight: #F2EDE4;
+    --color-highlight: #D9D3C7;
+
+ /* Colores de botones */
+    --btn-bg-default: var(--color-secondary); /* Color principal del botón */
+    --btn-bg-hover: #b83f34; /* Variación del color secundario para hover */
+    --btn-bg-active: #a1362e; /* Variación más oscura del secundario para active */
+    --btn-bg-disabled: #e3e0db; /* Variación clara, basada en el fondo */
+    --btn-text-color: var(--color-textlight); /* Texto claro sobre color secundario */
+    --btn-text-disabled: #a8a29e; /* Texto gris para botón deshabilitado */
+
+    /*Colores Emociones*/
+
+    --color-emotion-esperanza: #15AF4F; 
+    --color-emotion-alegria: #E9A000;  
+    --color-emotion-calma:#bb7171;     
+    --color-emotion-tristeza: #2A4C8C;  
+    --color-emotion-rabia: #CB1E1A;     
+    --color-emotion-ansiedad: #6A3F8F;  
+
+
+    /* Tipografía */
+    --font-main: 'EB Garamond', serif;
+    --font-handwriting: 'Island Moments', cursive;
+    --font-size-base: 1rem;
+}

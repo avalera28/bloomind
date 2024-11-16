@@ -1,0 +1,8 @@
+/* Reseteo básico de estilos para asegurar consistencia en todos los navegadores */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
