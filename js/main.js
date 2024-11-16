@@ -50,9 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const emotionButtons = document.querySelectorAll('.emotion-button');
+    const emotionButtons = document.querySelectorAll('.explore_button');
     const descriptionDiv = document.getElementById('emotionDescription');
 
+    console.log(emotionButtons);
     // Mostrar descripción y animación al pasar el mouse sobre un botón de emoción
     emotionButtons.forEach(button => {
         button.addEventListener('mouseover', () => {
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             descriptionDiv.style.display = "block";
 
             // Agregar clase de rebote para la animación
-            const emotionName = button.querySelector('.emotion-name');
+            const emotionName = button.querySelector('.explore_button-label');
             emotionName.classList.add('bounce');
         });
 
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('mouseout', () => {
             descriptionDiv.style.display = "none";
             descriptionDiv.innerHTML = '';
-            const emotionName = button.querySelector('.emotion-name');
+            const emotionName = button.querySelector('.explore_button-label');
             emotionName.classList.remove('bounce');
         });
 
@@ -100,4 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('emotionTitle').textContent = emotionData.title;
         document.getElementById('emotionDescriptionText').textContent = emotionData.description;
     }
+
+    // Resaltar el enlace activo en el encabezado
+    const links = document.querySelectorAll('.header_link');
+    const currentPage = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('header_link--active');
+        }
+    });
 });

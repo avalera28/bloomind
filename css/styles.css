@@ -1,4 +1,4 @@
-/* Estilos Generales */
+/* General Styles */
 body {
     font-family: var(--font-main);
     background-color: var(--color-background);
@@ -12,7 +12,7 @@ body {
     padding: 0 2rem;
 }
 
-/* Contenedor principal */
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -20,24 +20,25 @@ body {
     min-height: 100vh;
 }
 
-/* Define el valor inicial de la variable */
+
 :root {
     --color-emotion-hover: transparent;
 }
 
 /* Header */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
 }
 
-header .logo {
+.header_logo
+ {
     height: 50px;
 }
 
-header nav a {
+.header_link {
     font-family: var(--font-main);
     color: var(--color-primary);
     text-decoration: none;
@@ -45,7 +46,35 @@ header nav a {
     font-size: 1.1rem;
 }
 
-.button {
+.header_link--active {
+    font-weight: bold; /* Destaca el enlace */
+    color: var(--color-secondary); /* Cambia el color */
+    text-decoration: underline; /* Opcional: indica que está seleccionado */
+}
+
+/* General Styles for Shared Intro Sections */
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+.intro-section_title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section_text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+
+.intro-section_button {
     background-color: var(--btn-bg-default);
     color: var(--btn-text-color);
     padding: 0.5rem 1rem;
@@ -56,36 +85,38 @@ header nav a {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button:hover,
-.button:focus {
+.intro-section_button:hover,
+.intro-section_button:focus {
     background-color: var(--btn-bg-hover);
 }
 
-.button:active {
+.intro-section_button:active {
     background-color: var(--btn-bg-active);
 }
 
-.button:disabled {
+.intro-section_button:disabled {
     background-color: var(--btn-bg-disabled);
     color: var(--btn-text-disabled);
     cursor: not-allowed;
     opacity: 0.6;
 }
 
-
-/* Estilos de Introducción */
-.intro-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-    flex: 1;
+/* Specific Styles for the Home Page */
+.home_intro-section {
+    padding: 3rem;
+    background-color: var(--color-highlight);
 }
 
-.intro-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.home_title {
+    color: var(--color-primary);
+}
+
+.home_text {
+    color: var(--color-secondary);
+}
+
+.home_button {
+    margin-top: 1rem;
 }
 
 
@@ -100,12 +131,12 @@ header nav a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ajuste en la sombra */
 }
 
-#container-emotionDescription {
+/* Emotion Description */
+.explore_description-container {
     min-height: 300px;
-    
 }
 
-#emotionDescription {
+.explore_description  {
     max-width: 750px;
     padding: 1.5rem;
     background-color: var(--color-highlight);
@@ -115,18 +146,16 @@ header nav a {
     display: none; /* Oculto inicialmente */
 }
 
-
-
-/* Estilos generales del botón */
-
-.emotion-buttons {
+/* Grupo de botones */
+.explore_button-group {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 2rem;
 }
 
-.emotion-button {
+/* Botones individuales */
+.explore_button  {
     position: relative;
     width: 110px;
     height: 110px;
@@ -137,28 +166,24 @@ header nav a {
     transition: transform 0.3s ease;
     border: none;
 }
-
-/* Crecimiento al hacer hover */
-.emotion-button:hover {
+.explore_button:hover{
     transform: scale(1.2);
 }
 
-/* Mitad superior del botón */
-.emotion-button::before {
+/* Relleno superior del botón */
+.explore_button::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 50%;
-    
-
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
 
-/* Texto de la emoción */
-.emotion-name {
+/* Etiqueta del botón */
+.explore_button-label{
     position: absolute;
     bottom: 55px;
     width: 100%;
@@ -168,19 +193,17 @@ header nav a {
     color: var(--color-textlight);
     text-transform: uppercase;
     font-size: 0.8rem;
-  
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.215,.61,.355,1);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.215, .61, .355, 1);
 }
 
-/* Hover Effect: Rellena la mitad superior y muestra el texto */
-.emotion-button:hover::before {
-    background-color: var(--color-emotion-hover);
-}
-
-.emotion-button:hover .emotion-name {
+.explore_button:hover .explore_button-label {
     opacity: 1;
     animation: bounce 1s ease;
+}
+
+.explore_button:hover::before {
+    background-color: var(--color-emotion-hover);
 }
 
 /* Animación de rebote para el texto */
