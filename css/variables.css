@@ -38,6 +38,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Gabarito';
+    src: url('../assets/fonts/Gabarito/Gabarito-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Gabarito/Gabarito-Bold.woff') format('woff'),
+    url('../assets/fonts/Gabarito/Gabarito-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
 :root {
     /* Colores base */
     --color-background: #F2EDE4;
@@ -62,11 +71,21 @@
     --color-emotion-calma:#bb7171;     
     --color-emotion-tristeza: #2A4C8C;  
     --color-emotion-rabia: #CB1E1A;     
-    --color-emotion-ansiedad: #6A3F8F;  
+    --color-emotion-ansiedad: #6A3F8F;
+
+     /*Colores Variacion Emociones para el generador de plantas*/
+
+     --esperanza-variacion-1: #15AF4F; 
+     --alegria-variacion-1: #E9A000;  
+     --calma-variacion-1:#bb7171;     
+     --tristeza-variacion-1: #2A4C8C;  
+     --rabia-variacion-1: #CB1E1A;     
+     --ansiedad-variacion-1: #6A3F8F;
 
 
     /* Tipografía */
     --font-main: 'EB Garamond', serif;
+    --font-secondary: 'Gabarito', sans-serif ;
     --font-handwriting: 'Island Moments', cursive;
     --font-size-base: 1rem;
 }
