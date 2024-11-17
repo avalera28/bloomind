@@ -12,7 +12,9 @@
 
 <body>
     <header class="header">
-        <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="header_logo">
+        <a href="index.html" class="header_logo-link">
+            <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="header_logo">
+        </a>
         <nav class="header_nav">
             <a href="index.html" class="header_link">Inicio</a>
             <a href="explorar.html" class="header_link">Explorar Emociones</a>
@@ -20,11 +22,32 @@
         </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main-container explore">
         <section class="explore intro-section">
             <h2 class="explore_title">Crea tu semilla, elige una emoción:</h2>
+
             <div class="explore_description-container">
-                <div id="emotionDescription" class="explore_description text-box"></div>
+
+                <div class="explore-description_header">
+                    <div class="explore-description_title">Title</div>
+                    <div class="explore-description_line"></div>
+                    <div class="explore-description_subtitle"></div>
+                   
+                    <div class="explore-description_content">
+
+                        <div class="explore-description_image-container">
+                            <img src="" alt="">
+                        </div>
+
+                        
+                        <div id="emotionDescription" class="explore_description"></div>
+                    </div>
+                </div>
+
+                <div class="explore-description_side">
+                    <p class="explore-description_latin-name">latin name</p>
+                    <div class="explore-description_line"></div>
+                </div>
             </div>
             <div class="explore_button-group">
                 <button type="button" class="explore_button" data-emotion="esperanza">
@@ -49,7 +72,7 @@
         </section>
     </main>
 
-    <footer  class="footer"></footer>
+    <footer class="footer"></footer>
 
     <script src="js/main.js"></script>
 </body>

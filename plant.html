@@ -11,31 +11,33 @@
 </head>
 
 <body>
-    <header>
-        <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="logo">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="explorar.html">Explorar Emociones</a>
-            <a href="proyecto.html">El Proyecto</a>
+    <header class="header">
+        <a href="index.html" class="header_logo-link">
+            <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="header_logo">
+        </a>
+        <nav class="header_nav">
+            <a href="index.html" class="header_link">Inicio</a>
+            <a href="explorar.html" class="header_link">Explorar Emociones</a>
+            <a href="proyecto.html" class="header_link">El Proyecto</a>
         </nav>
     </header>
 
-    <main>
-        <section class="intro-section plant-generation">
-            <div class="columText">
-                <h2 id="emotionTitle">Esperanza</h2>
-                <p id="emotionDescriptionText" class="text-box">Aquí va la descripción detallada de la emoción
+    <main class="main-container plant">
+        <section class="plant_generation">
+            <div class="plant_column">
+                <h2 id="emotionTitle" class="plant_title">Esperanza</h2>
+                <p id="emotionDescriptionText" class="plant_description">Aquí va la descripción detallada de la emoción
                     seleccionada.</p>
-                <button class="button" type="button" onclick="window.location.href='explorar.html'">Cancelar</button>
+                <button class="general_button plant_button" type="button" onclick="window.location.href='explorar.html'">Cancelar</button>
             </div>
-            <div class="svg-generator text-box" id="svgGenerator">
+            <div class="plant_svg-generator text-box" id="svgGenerator">
                 <p>SVG GENERATOR</p>
             </div>
 
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer"></footer>
 
     <script src="js/main.js"></script>
 </body>

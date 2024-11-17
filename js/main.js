@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Efecto de aparición al hacer scroll en los elementos con la clase 'fade-in'
     const elements = document.querySelectorAll('[data-scroll="fade-in"]');
 
+// Elementos de la tarjeta
+const titleElement = document.querySelector('.explore-description_title');
+const subtitleElement = document.querySelector('.explore-description_subtitle');
+const latinNameElement = document.querySelector('.explore-description_latin-name');
+const descriptionTextElement = document.getElementById('emotionDescription');
+const imageElement = document.querySelector('.explore-description_image-container img');
+const descriptionContainer = document.querySelector('.explore_description-container');
+
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -20,40 +29,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const emotions = {
         esperanza: {
             title: "Esperanza",
-            description: "La esperanza es la emoción que nos motiva a proyectarnos hacia el futuro con optimismo. Nos impulsa a confiar en el cambio y visualizar posibilidades que nos inspiran.",
+            latin_name: "Spes Lucida",
+            family: "Energizing Family",
+            image: "assets/images/hope_seed.png",
+            description_explore: "La esperanza es la emoción que nos motiva a proyectarnos hacia el futuro con optimismo, aun en circunstancias desafiantes. Nos impulsa a confiar en el cambio y a visualizar posibilidades que nos inspiran.",
+            description_plant: "La esperanza se manifiesta como una sensación de apertura y ligereza en el pecho, una expansión que nos anima a proyectarnos hacia adelante. Mentalmente, se percibe como un destello de claridad, que ilumina nuevas posibilidades. Aprovecha este momento para visualizar tus metas y conectarte con lo que te inspira.",
             color: "var(--color-emotion-esperanza)"
         },
         alegria: {
             title: "Alegría",
-            description: "La alegría nos brinda momentos de felicidad y satisfacción con la vida. Es una emoción positiva que nos conecta con el presente.",
+            latin_name: "Laetitia Vivida",
+            family: "Energizing Family",
+            image: "assets/images/joy_seed.png",
+            description_explore: "La alegría es una emoción positiva que refuerza nuestro bienestar y nos conecta con los aspectos satisfactorios de la vida. Experimentarla nos invita a apreciar el presente y a compartir momentos de conexión.",
+            description_plant: "La alegría se siente como una chispa de energía que recorre todo el cuerpo, una sensación brillante y efervescente que nos llena de vitalidad. Mentalmente, es un estado claro y positivo, que nos impulsa a disfrutar plenamente el momento presente. Aprovecha esta alegría para compartir tus sensaciones con los demás y expandir ese momento positivo.",
             color: "var(--color-emotion-alegria)"
         },
         calma: {
             title: "Calma",
-            description: "La calma nos permite mantenernos en paz en situaciones de tranquilidad. Nos ayuda a encontrar un equilibrio interior y a disfrutar de momentos de serenidad.",
+            latin_name: "Serenitas Profunda",
+            family: "Tranquilizing Family",
+            image: "assets/images/calm_seed.png",
+            description_explore: "La calma es una sensación de serenidad que nos permite centrar nuestra mente y cuerpo. Esta emoción es fundamental para el bienestar, pues nos ayuda a gestionar el estrés y a encontrar claridad en la toma de decisiones.",
+            description_plant: "La calma se percibe como una suavidad en todo el cuerpo, una sensación de relajación que invita a bajar el ritmo. Mentalmente, es similar a una superficie de agua tranquila y sin interrupciones. Permítete disfrutar de esta calma, respirando lentamente y saboreando la tranquilidad del momento.",
             color: "var(--color-emotion-calma)"
         },
         tristeza: {
             title: "Tristeza",
-            description: "La tristeza refleja la emoción ante las pérdidas y nos ayuda a sanar. Es una emoción que nos permite conectar con nuestra vulnerabilidad.",
+            latin_name: "Tristitia Profunda",
+            family: "Introspective Family",
+            image: "assets/images/sadness_seed.png",
+            description_explore: "La tristeza es una emoción que nos permite procesar y reflexionar sobre las pérdidas o momentos difíciles. A través de ella, reconocemos nuestras experiencias y aprendemos a dejar ir, fortaleciendo nuestra resiliencia.",
+            description_plant: "La tristeza se percibe como una sensación de peso en el cuerpo, especialmente en el pecho y los hombros, y tiende a ralentizar nuestro ritmo. Mentalmente, es un estado profundo y reflexivo, que invita a la introspección y a procesar lo que hemos vivido. Date el permiso de sentir y expresar esta emoción; hablar con alguien de confianza puede ayudarte a procesarla.",
             color: "var(--color-emotion-tristeza)"
         },
         rabia: {
             title: "Rabia",
-            description: "La rabia nos da fuerza para enfrentar las injusticias y cambios. Es una emoción que nos motiva a actuar y buscar soluciones.",
+            latin_name: "Ira Vehementia",
+            family: "Activating Family",
+            image: "assets/images/rage_seed.png",
+            description_explore: "La rabia es una emoción intensa que surge cuando percibimos injusticias o amenazas. Es una fuerza que nos motiva a protegernos y a defender nuestros valores, siempre con el desafío de expresarla de forma constructiva.",
+            description_plant: "La rabia es una emoción intensa que se siente como una presión o calor concentrado en el pecho o las manos. Es una energía fuerte y motivadora, que nos da la determinación de actuar o expresar nuestras inquietudes con convicción. Antes de reaccionar, intenta canalizar esa energía de manera constructiva, por ejemplo, escribiendo o hablando sobre lo que sientes.",
             color: "var(--color-emotion-rabia)"
         },
         ansiedad: {
             title: "Ansiedad",
-            description: "La ansiedad es una señal de alerta para buscar calma y seguridad. Nos recuerda la importancia de cuidar de nuestra salud mental y emocional.",
+            latin_name: "Anxietas Constans",
+            family: "Anticipatory Family",
+            image: "assets/images/anxiety_seed.png",
+            description_explore: "La ansiedad es una respuesta emocional ante la incertidumbre y el cambio. Aunque a veces desafiante, comprenderla nos ayuda a reconocer nuestros miedos y a desarrollar estrategias para manejarlos con equilibrio.",
+            description_plant: "La ansiedad suele sentirse como una tensión constante en el cuerpo, especialmente en el pecho y el abdomen, acompañada de una sensación de inquietud. A nivel mental, puede ser un flujo rápido y repetitivo de pensamientos difíciles de controlar. Tómate un instante para respirar profundamente y recobrar el equilibrio, permitiendo que cada respiración calme tu mente.",
             color: "var(--color-emotion-ansiedad)"
         }
     };
 
     const emotionButtons = document.querySelectorAll('.explore_button');
-    const descriptionDiv = document.getElementById('emotionDescription');
+    
 
-    console.log(emotionButtons);
+    console.log(descriptionContainer );
     // Mostrar descripción y animación al pasar el mouse sobre un botón de emoción
     emotionButtons.forEach(button => {
         button.addEventListener('mouseover', () => {
@@ -63,18 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // Cambiar el color de la mitad superior
             button.style.setProperty('--color-emotion-hover', emotionInfo.color);
 
-            // Mostrar cuadro de texto con la descripción y ajustar visibilidad
-            descriptionDiv.innerHTML = `
-                <div class="description-box" style="background-color: var(--color-highlight)">
-                    <h3>${emotionInfo.title}</h3>
-                    <p>${emotionInfo.description}</p>
-                </div>
-            `;
-            descriptionDiv.style.display = "block";
-
             // Agregar clase de rebote para la animación
             const emotionName = button.querySelector('.explore_button-label');
             emotionName.classList.add('bounce');
+
+           
+          // Rellenar los datos en la tarjeta
+          titleElement.textContent = emotionInfo.title;
+          subtitleElement.textContent = "Semilla"; // Valor estático
+          latinNameElement.style.color= emotionInfo.color;
+          latinNameElement.textContent = emotionInfo.latin_name;
+          descriptionTextElement.textContent = emotionInfo.description_explore;
+          imageElement.src = emotionInfo.image;
+          imageElement.alt = emotionInfo.title;
+
+          // Mostrar el contenedor si estaba oculto
+          descriptionContainer.style.display = 'flex';
+
+
         });
 
         // Limpiar la descripción y ocultar cuadro al quitar el mouse
@@ -99,12 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedEmotion && window.location.pathname.includes('plant.html')) {
         const emotionData = JSON.parse(selectedEmotion);
         document.getElementById('emotionTitle').textContent = emotionData.title;
-        document.getElementById('emotionDescriptionText').textContent = emotionData.description;
+        document.getElementById('emotionDescriptionText').textContent = emotionData.description_plant;
     }
 
     // Resaltar el enlace activo en el encabezado
     const links = document.querySelectorAll('.header_link');
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname.replace("/", "");
+
+    console.log('links', links)
+    console.log('currentPage', currentPage)
 
     links.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
