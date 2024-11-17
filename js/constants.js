@@ -2,7 +2,7 @@ let examplePlantConfiguration = {};
 let emotions = {};
 
 function initPlantConfiguration() {
-    return readJsonFile("./data/example_plant_configuration.json")
+    return readJsonFile(localStorage.getItem("plant_source"))
     .then((data) => {
         examplePlantConfiguration = data;
         return true;
@@ -22,6 +22,9 @@ const allColors = {
 
     /* Variaciones y Gradientes Emocionales */
     "esperanza-variacion-1": getComputedStyle(document.body).getPropertyValue("--esperanza-variacion-1"),
+    "esperanza-variacion-2": getComputedStyle(document.body).getPropertyValue("--esperanza-variacion-2"),
+    "esperanza-variacion-3": getComputedStyle(document.body).getPropertyValue("--esperanza-variacion-3"),
+    "esperanza-variacion-4": getComputedStyle(document.body).getPropertyValue("--esperanza-variacion-4"),
 
     "alegria-variacion-1": getComputedStyle(document.body).getPropertyValue("--alegria-variacion-1"),
 

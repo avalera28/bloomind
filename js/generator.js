@@ -48,7 +48,6 @@ function generatePlant(counter, initialPosition, growDuration) {
     const stemElements = createStem(plantSuffix, initialPosition);
     const leavesElements = createLeaves(plantSuffix, stemElements[0].points);
     const flowerElements = createFlowers(plantSuffix, stemElements[0].points);
-
     const allElements = leavesElements.concat(flowerElements);
     gsap.from(stemElements[0].element, {
         drawSVG: 0,

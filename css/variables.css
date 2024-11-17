@@ -76,6 +76,10 @@ font-style: normal;
      /*Colores Variacion Emociones para el generador de plantas*/
 
      --esperanza-variacion-1: #15AF4F; 
+     --esperanza-variacion-2: #1DD44F;
+     --esperanza-variacion-3: #052B14;
+     --esperanza-variacion-4: #0A5426;
+
      --alegria-variacion-1: #E9A000;  
      --calma-variacion-1:#bb7171;     
      --tristeza-variacion-1: #2A4C8C;  
