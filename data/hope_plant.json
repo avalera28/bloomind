@@ -1,7 +1,7 @@
 {
     "name": "Hope",
-    "plants": 4,
-    "min_separation": 70,
+    "plants": 5,
+    "min_separation": 100,
     "leaves_per_plant": 6,
     "grow_duration": 1.5,
     "components": {
@@ -50,7 +50,7 @@
                                 }
                             },
                             {
-                                "relative_position": 55,
+                                "relative_position": 65,
                                 "offset": {
                                     "x": 0,
                                     "y": 0
