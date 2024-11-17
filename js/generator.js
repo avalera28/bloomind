@@ -161,7 +161,7 @@ function initTransformElement(element, template, totalOffset) {
         rotation: _.random(template.rotation.min, template.rotation.max)
     }
     if(Object.hasOwn(template, "origin")){
-        options.transformOrigin = `${template.origin.x_precent}% ${template.origin.y_percent}%`;
+        options.transformOrigin = `${template.origin.x_percent}% ${template.origin.y_percent}%`;
     }
     gsap.set(element, options);
 }
