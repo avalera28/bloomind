@@ -1,0 +1,268 @@
+{
+    "name": "nombre de planta",
+    "number_plants": 4,
+    "min_separation": 150,
+    "plants": [
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-1.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-2.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-3.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-4.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-5.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-6.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-7.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-8.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        },
+        {
+            "source": "./assets/images/Hope/SVG/hope_variation_100x100-9.svg",
+            "scale": 4.5,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 3,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 2,
+                    "grow_delay": 1,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 50
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1,
+                    "grow_delay": 2,
+                    "animation_strategy": "scale",
+                    "origin": {
+                        "x_percent": 50,
+                        "y_percent": 100
+                    }
+                }
+            }
+        }
+    ]
+}

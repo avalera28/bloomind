@@ -1,0 +1,36 @@
+{
+    "name": "nombre de planta",
+    "number_plants": 2,
+    "min_separation": 20,
+    "plants": [
+        {
+            "source": "path_to_svg",
+            "scale": 0,
+            "offset": {"x": 0, "y": 0},
+            "components": {
+                "stem": {
+                    "grow_duration": 1.5,
+                    "grow_delay": 0
+                },
+                "leaf": {
+                    "grow_duration": 1.5,
+                    "grow_delay": 0,
+                    "animation_strategy": "scale, opacity",
+                    "origin": {
+                        "x_percent": 0,
+                        "y_percent": 0
+                    }
+                },
+                "flower": {
+                    "grow_duration": 1.5,
+                    "grow_delay": 0,
+                    "animation_strategy": "scale, opacity",
+                    "origin": {
+                        "x_percent": 0,
+                        "y_percent": 0
+                    }
+                }
+            }
+        }
+    ]
+}
