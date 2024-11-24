@@ -28,7 +28,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
     // Datos de emociones y sus colores
     const emotions = {
         esperanza: {
-            plant_source: "./data/hope_plant.json",
+            key: "hope",
             title: "Esperanza",
             latin_name: "Spes Lucida",
             family: "Energizing Family",
@@ -38,7 +38,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             color: "var(--color-emotion-esperanza)"
         },
         alegria: {
-            plant_source: "./data/example_plant_configuration.json",
+            key: "joy",
             title: "Alegría",
             latin_name: "Laetitia Vivida",
             family: "Energizing Family",
@@ -48,7 +48,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             color: "var(--color-emotion-alegria)"
         },
         calma: {
-            plant_source: "./data/example_plant_configuration.json",
+            key: "calm",
             title: "Calma",
             latin_name: "Serenitas Profunda",
             family: "Tranquilizing Family",
@@ -58,7 +58,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             color: "var(--color-emotion-calma)"
         },
         tristeza: {
-            plant_source: "./data/example_plant_configuration.json",
+            key: "sadness",
             title: "Tristeza",
             latin_name: "Tristitia Profunda",
             family: "Introspective Family",
@@ -68,7 +68,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             color: "var(--color-emotion-tristeza)"
         },
         rabia: {
-            plant_source: "./data/example_plant_configuration.json",
+            key: "rage",
             title: "Rabia",
             latin_name: "Ira Vehementia",
             family: "Activating Family",
@@ -78,7 +78,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             color: "var(--color-emotion-rabia)"
         },
         ansiedad: {
-            plant_source: "./data/example_plant_configuration.json",
+            key: "anxiety",
             title: "Ansiedad",
             latin_name: "Anxietas Constans",
             family: "Anticipatory Family",
@@ -135,7 +135,8 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             const emotion = button.getAttribute('data-emotion');
             const emotionInfo = emotions[emotion];
             localStorage.setItem('selectedEmotion', JSON.stringify(emotionInfo));
-            localStorage.setItem("plant_source", emotions[emotion].plant_source);
+            localStorage.setItem("plant_source", emotions[emotion].emotion);
+            localStorage.setItem("emotionKey", emotions[emotion].key)
             window.location.href = 'plant.html';
         });
     });
