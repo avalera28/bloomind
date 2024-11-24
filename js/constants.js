@@ -27,6 +27,9 @@ const allColors = {
     "esperanza-variacion-4": getComputedStyle(document.body).getPropertyValue("--esperanza-variacion-4"),
 
     "alegria-variacion-1": getComputedStyle(document.body).getPropertyValue("--alegria-variacion-1"),
+    "alegria-variacion-2": getComputedStyle(document.body).getPropertyValue("--alegria-variacion-2"),
+    "alegria-variacion-3": getComputedStyle(document.body).getPropertyValue("--alegria-variacion-3"),
+    "alegria-variacion-4": getComputedStyle(document.body).getPropertyValue("--alegria-variacion-4"),
 
     "calma-variacion-1": getComputedStyle(document.body).getPropertyValue("--calma-variacion-1"),
 

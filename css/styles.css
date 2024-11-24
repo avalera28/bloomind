@@ -153,11 +153,13 @@ body {
 }
 
 .explore_title {
-    margin-bottom: 20px;
+    opacity: 0;
+    
 }
 
 .explore_description-container {
-    display: none;
+    display: flex;
+   opacity: 0;
     justify-content: center;
     align-items: center;
     background-color: var(--color-highlight);
@@ -166,6 +168,7 @@ body {
     padding: 2rem;
     gap: 1rem;
     margin: 0 auto;
+    min-height: 25rem;
     height: auto;
 }
 
@@ -181,7 +184,6 @@ body {
 .explore-description_title {
     font-size: 2rem;
     font-weight: bold;
-
     color: var(--color-text);
 }
 
@@ -206,6 +208,7 @@ body {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    
 }
 
 /* Contenedor de imagen */
@@ -215,7 +218,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-shrink: 0;
 }
 
@@ -249,16 +251,16 @@ body {
     font-size: 2rem;
     font-style: italic;
     color: var(--color-text);
-    text-align: center; 
+    text-align: center;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
     vertical-align: center;
-    
+
 }
 
 /* Estilo adicional para línea en barra lateral */
-.explore-description_line-side{
+.explore-description_line-side {
     width: 1px;
     background-color: var(--color-primary);
     margin: 2rem 0;
@@ -271,101 +273,108 @@ body {
     justify-content: center;
     gap: 1rem;
     padding: 2rem;
+    transform: scale(0);
 }
 
 /* Botones individuales */
 .explore_button {
     position: relative;
-    width: 110px;
-    height: 110px;
+    /* Mantener */
+    width: 120px;
+    /* Editar (antes era 110px) */
+    height: 120px;
+    /* Editar (antes era 110px) */
     border-radius: 50%;
+    /* Mantener */
     background-color: var(--color-primary);
+    /* Mantener */
     overflow: hidden;
+    /* Mantener */
     cursor: pointer;
-    transition: transform 0.3s ease;
-    border: none;
+    /* Mantener */
+
 }
+
+
 
 .explore_button:hover {
     transform: scale(1.2);
+    /* Mantener */
+
 }
 
 /* Relleno superior del botón */
 .explore_button::before {
     content: '';
+    /* Mantener */
     position: absolute;
-    top: 0;
+    /* Mantener */
+    bottom: 0;
+    /* Mantener */
     left: 0;
+    /* Mantener */
     width: 100%;
-    height: 50%;
+    /* Mantener */
+    height: 45%;
+    /* Mantener */
     background-color: transparent;
+    /* Mantener */
     transition: background-color 0.3s ease;
+    /* Mantener */
+
+}
+
+
+/* Cambia el color al hacer hover en el botón */
+.explore_button:hover::before {
+    background-color: var(--color-emotion-hover);
+    /* Añadido */
 }
 
 /* Etiqueta del botón */
 .explore_button-label {
     position: absolute;
+    /* Mantener */
     bottom: 55px;
+    /* Mantener */
     width: 100%;
+    /* Mantener */
     left: 0;
+    /* Mantener */
     text-align: center;
+    /* Mantener */
     font-family: var(--font-main);
+    /* Mantener */
     color: var(--color-textlight);
+    /* Mantener */
     text-transform: uppercase;
+    /* Mantener */
     font-size: 0.8rem;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.215, .61, .355, 1);
-}
-
-.explore_button:hover .explore_button-label {
+    /* Mantener */
     opacity: 1;
-    animation: bounce 1s ease;
+    /* Cambiar de 0 a 1 para que sean visibles desde el inicio */
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /* Añadir transición suave */
+
 }
 
-.explore_button:hover::before {
-    background-color: var(--color-emotion-hover);
+
+
+
+  
+
+.explore_instruction {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin: 1.5rem;
+    
+    opacity: 0;
 }
 
-/* Animación de rebote para el texto */
-@keyframes bounce {
 
-    0%,
-    20%,
-    53%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
 
-    40%,
-    43% {
-        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
-        transform: translate3d(0, -15px, 0) scaleY(1.1)
-    }
 
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
-        transform: translate3d(0, -8px, 0) scaleY(1.05)
-    }
-
-    80% {
-        -webkit-transform: translateZ(0) scaleY(.95);
-        transform: translateZ(0) scaleY(.95);
-        -webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
-        transform: translate3d(0, -2px, 0) scaleY(1.02)
-    }
-}
 
 
 /* Estilos específicos para la página de generar planta*/
@@ -375,13 +384,7 @@ body {
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem;
-/*     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 2rem;
-    min-height: 70vh; */
+
 }
 
 .plant_column {
@@ -390,12 +393,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-   /*  display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 300px;
-    min-height: 600px;
-    gap: 1rem; */
+
 }
 
 
@@ -403,8 +401,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-primary);
-   /*  font-size: 2.5rem;
-    margin: 0.5rem 0; */
+
 }
 
 .plant_latin-name {
@@ -457,13 +454,7 @@ body {
     text-align: center;
     border: 1px solid var(--color-primary);
 
-    /* flex: 1;
-    background-color: var(--color-highlight);
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+
 }
 
 .plant_right-visual {
@@ -483,10 +474,11 @@ body {
 }
 
 .plant_visual-box {
-    background-color: #e5e5e5; /* Fondo gris claro */
+    background-color: var(--color-highlight);
     border: 1px solid #ccc;
     width: 100%;
-    height: 500px; /* Altura del contenedor visual */
+    height: 500px;
+    /* Altura del contenedor visual */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,7 +502,7 @@ body {
 
 .plant_details-title {
     font-size: 1rem;
-    
+
     color: var(--color-primary);
 }
 
@@ -605,5 +597,5 @@ body {
 
 #garden {
     width: 100%;
-    height: 100%;  
-  }
+    height: 100%;
+}

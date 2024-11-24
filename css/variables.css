@@ -50,6 +50,7 @@ font-style: normal;
 :root {
     /* Colores base */
     --color-background: #F2EDE4;
+    --color-background-dark:212121;
     --color-primary: #0C0D0B;
     --color-secondary: #D9483B;
     --color-text: #0C0D0B;
@@ -81,6 +82,10 @@ font-style: normal;
      --esperanza-variacion-4: #0A5426;
 
      --alegria-variacion-1: #E9A000;  
+     --alegria-variacion-2: #F9B538;  
+     --alegria-variacion-3: #F5DF31 ;  
+     --alegria-variacion-4: #E77F25;  
+
      --calma-variacion-1:#bb7171;     
      --tristeza-variacion-1: #2A4C8C;  
      --rabia-variacion-1: #CB1E1A;     

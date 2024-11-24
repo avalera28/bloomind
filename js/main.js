@@ -4,15 +4,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Efecto de aparición al hacer scroll en los elementos con la clase 'fade-in'
     const elements = document.querySelectorAll('[data-scroll="fade-in"]');
 
-// Elementos de la tarjeta
-const titleElement = document.querySelector('.explore-description_title');
-const subtitleElement = document.querySelector('.explore-description_subtitle');
-const latinNameElement = document.querySelector('.explore-description_latin-name');
-const descriptionTextElement = document.getElementById('emotionDescription');
-const imageElement = document.querySelector('.explore-description_image-container img');
-const descriptionContainer = document.querySelector('.explore_description-container');
+    // Elementos de la tarjeta
+    const titleElement = document.querySelector('.explore-description_title');
+    const subtitleElement = document.querySelector('.explore-description_subtitle');
+    const latinNameElement = document.querySelector('.explore-description_latin-name');
+    const descriptionTextElement = document.getElementById('emotionDescription');
+    const imageElement = document.querySelector('.explore-description_image-container img');
+    const descriptionContainer = document.querySelector('.explore_description-container');
+    const emotionButtons = document.querySelectorAll('.explore_button');
+    const buttonGroup = document.querySelector('.explore_button-group');
+    const exploreInstruction = document.querySelector('.explore_instruction');
+    
+    let cardActive = false;
 
+    gsap.to(
+        ".explore_title",
+        { opacity: 1, duration: 1.5 }
+    )
+    
+    gsap.to(
+        exploreInstruction,
+        { opacity: 1, duration: 1.5, delay:1.5}
+    )
 
+    gsap.fromTo(
+        buttonGroup,
+        { scale: 0 },
+        { scale: 1, duration: 1.5, delay: 1.5 }
+
+    )
+
+   
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -89,35 +111,48 @@ const descriptionContainer = document.querySelector('.explore_description-contai
         }
     };
 
-    const emotionButtons = document.querySelectorAll('.explore_button');
-    
 
-    console.log(descriptionContainer );
+
+
+    console.log(descriptionContainer);
     // Mostrar descripción y animación al pasar el mouse sobre un botón de emoción
     emotionButtons.forEach(button => {
         button.addEventListener('mouseover', () => {
+
+            // Reposicionar los botones
+            buttonGroup.classList.add('active');
+
             const emotion = button.getAttribute('data-emotion');
             const emotionInfo = emotions[emotion];
 
             // Cambiar el color de la mitad superior
             button.style.setProperty('--color-emotion-hover', emotionInfo.color);
 
-            // Agregar clase de rebote para la animación
-            const emotionName = button.querySelector('.explore_button-label');
-            emotionName.classList.add('bounce');
 
-           
-          // Rellenar los datos en la tarjeta
-          titleElement.textContent = emotionInfo.title;
-          subtitleElement.textContent = "Semilla"; // Valor estático
-          latinNameElement.style.color= emotionInfo.color;
-          latinNameElement.textContent = emotionInfo.latin_name;
-          descriptionTextElement.textContent = emotionInfo.description_explore;
-          imageElement.src = emotionInfo.image;
-          imageElement.alt = emotionInfo.title;
+            // Rellenar los datos en la tarjeta
+            titleElement.textContent = emotionInfo.title;
+            subtitleElement.textContent = "Semilla"; // Valor estático
+            latinNameElement.style.color = emotionInfo.color;
+            latinNameElement.textContent = emotionInfo.latin_name;
+            descriptionTextElement.textContent = emotionInfo.description_explore;
+            imageElement.src = emotionInfo.image;
+            imageElement.alt = emotionInfo.title;
 
-          // Mostrar el contenedor si estaba oculto
-          descriptionContainer.style.display = 'flex';
+            // Mostrar el contenedor si estaba oculto
+            if (cardActive == false) {
+                gsap.fromTo(
+                    descriptionContainer,
+                    { rotateX: 80, opacity: 0 },
+                    { rotateX: 0, opacity: 1, duration: 0.5 }
+                );
+                cardActive = true;
+            }
+
+            gsap.to(
+                exploreInstruction,
+                { opacity: 0, duration: 1.5 }
+            )
+
 
 
         });
@@ -127,7 +162,7 @@ const descriptionContainer = document.querySelector('.explore_description-contai
             descriptionDiv.style.display = "none";
             descriptionDiv.innerHTML = '';
             const emotionName = button.querySelector('.explore_button-label');
-            emotionName.classList.remove('bounce');
+
         });
 
         // Al hacer clic en una emoción, almacenar los datos y redirigir a la página de generación de la planta
