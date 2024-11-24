@@ -154,12 +154,12 @@ body {
 
 .explore_title {
     opacity: 0;
-    
+
 }
 
 .explore_description-container {
     display: flex;
-   opacity: 0;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     background-color: var(--color-highlight);
@@ -190,7 +190,7 @@ body {
 .explore-description_subtitle {
     font-family: var(--font-handwriting);
     font-size: 1.5rem;
-    font-weight: bold;
+
 
     color: var(--color-text);
 }
@@ -199,7 +199,7 @@ body {
 .explore-description_line {
     height: 1px;
     background-color: var(--color-primary);
-    margin: 2rem 0;
+    margin: 0.5rem 0;
     width: 100%;
 }
 
@@ -208,7 +208,7 @@ body {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    
+
 }
 
 /* Contenedor de imagen */
@@ -361,14 +361,14 @@ body {
 
 
 
-  
+
 
 .explore_instruction {
     text-align: center;
     font-size: 1.2rem;
     color: var(--color-text);
     margin: 1.5rem;
-    
+    font-family: var(--font-handwriting);
     opacity: 0;
 }
 
@@ -412,9 +412,10 @@ body {
 }
 
 .plant_family-name {
-    font-size: 1rem;
-    font-style: italic;
-    color: var(--color-secondary-light);
+    font-weight: normal;
+    font-size: 2rem;
+    font-family: var(--font-handwriting);
+    color: var(--color-text);
 }
 
 .plant_description {
@@ -424,10 +425,18 @@ body {
     margin-bottom: 1rem;
 }
 
+.CTA {
+    font-size: 1.2rem;
+
+    font-weight: bolder;
+    line-height: 1.8;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
 .plant_instruction {
     font-size: 1rem;
-    font-style: italic;
-    color: var(--color-secondary);
+    font-weight: bold;
 
 }
 
@@ -474,15 +483,14 @@ body {
 }
 
 .plant_visual-box {
-    background-color: var(--color-highlight);
+   background-color: var(--color-highlight);
     border: 1px solid #ccc;
+    border-bottom: 0.8rem solid #C7B299;
     width: 100%;
     height: 500px;
     /* Altura del contenedor visual */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #666;
+
+
     font-size: 1rem;
     margin-top: 60px;
 }
@@ -509,10 +517,10 @@ body {
 .plant_details-content {
     display: flex;
     align-items: center;
- 
+
 }
 
-.plant_details-content p{
+.plant_details-content p {
     font-family: var(--font-handwriting);
     font-size: 2.5rem;
     margin-left: 1rem;
@@ -521,9 +529,9 @@ body {
 .plant_details-content-img {
     max-width: 70px;
     width: 25%;
-    height:auto;
+    height: auto;
     object-fit: cover;
-  
+
 }
 
 .plant_details-content-text {

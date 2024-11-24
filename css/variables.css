@@ -47,6 +47,20 @@ font-weight: normal;
 font-style: normal;
 }
 
+/*Delphin*/
+
+@font-face {
+    font-family: 'OPTIDelphin';
+    src: url('../assets/fonts/Delphin/OPTIDelphin-One.woff2') format('woff2'),
+    url('../assets/fonts/Delphin/OPTIDelphin-One.woff') format('woff'),
+    url('../assets/fonts/Delphin/OPTIDelphin-One.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+
 :root {
     /* Colores base */
     --color-background: #F2EDE4;
@@ -95,6 +109,6 @@ font-style: normal;
     /* Tipografía */
     --font-main: 'EB Garamond', serif;
     --font-secondary: 'Gabarito', sans-serif ;
-    --font-handwriting: 'Island Moments', cursive;
+    --font-handwriting: 'OPTIDelphin', serif;
     --font-size-base: 1rem;
 }
