@@ -425,10 +425,10 @@ body {
 }
 
 .plant_instruction {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-style: italic;
-    color: var(--color-secondary-dark);
-    margin-top: 1rem;
+    color: var(--color-secondary);
+
 }
 
 
@@ -509,27 +509,34 @@ body {
 .plant_details-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.9rem;
-    color: var(--color-text);
+ 
+}
+
+.plant_details-content p{
+    font-family: var(--font-handwriting);
+    font-size: 2.5rem;
+    margin-left: 1rem;
 }
 
 .plant_details-content-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+    max-width: 70px;
+    width: 25%;
+    height:auto;
+    object-fit: cover;
+  
 }
 
 .plant_details-content-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-text);
+    font-weight: normal;
 }
 
 .plant_details-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-text);
 }
 

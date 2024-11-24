@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         esperanza: {
             key: "hope",
             title: "Esperanza",
+            location: "hope.html",
             latin_name: "Spes Lucida",
             family: "Energizing Family",
             image: "assets/images/hope_seed.png",
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alegria: {
             key: "joy",
             title: "Alegría",
+            location: "joy.html",
             latin_name: "Laetitia Vivida",
             family: "Energizing Family",
             image: "assets/images/joy_seed.png",
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calma: {
             key: "calm",
             title: "Calma",
+            location: "calm.html",
             latin_name: "Serenitas Profunda",
             family: "Tranquilizing Family",
             image: "assets/images/calm_seed.png",
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tristeza: {
             key: "sadness",
             title: "Tristeza",
+            location: "sadness.html",
             latin_name: "Tristitia Profunda",
             family: "Introspective Family",
             image: "assets/images/sadness_seed.png",
@@ -92,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rabia: {
             key: "rage",
             title: "Rabia",
+            location: "rage.html",
             latin_name: "Ira Vehementia",
             family: "Activating Family",
             image: "assets/images/rage_seed.png",
@@ -102,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ansiedad: {
             key: "anxiety",
             title: "Ansiedad",
+            location: "anxiety.html",
             latin_name: "Anxietas Constans",
             family: "Anticipatory Family",
             image: "assets/images/anxiety_seed.png",
@@ -172,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('selectedEmotion', JSON.stringify(emotionInfo));
             localStorage.setItem("plant_source", emotions[emotion].emotion);
             localStorage.setItem("emotionKey", emotions[emotion].key)
-            window.location.href = 'plant.html';
+            window.location.href = emotionInfo.location;
         });
     });
 

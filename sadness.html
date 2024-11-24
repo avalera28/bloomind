@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardín de Emociones - Cultivar</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="header_logo-link">
+            <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="header_logo">
+        </a>
+        <nav class="header_nav">
+            <a href="index.html" class="header_link">Inicio</a>
+            <a href="explorar.html" class="header_link">Explorar Emociones</a>
+            <a href="proyecto.html" class="header_link">El Proyecto</a>
+        </nav>
+    </header>
+
+    <main class="main-container plant">
+        <section class="plant_generation">
+            <div class="plant_column">
+                <h2 id="emotionTitle" class="plant_title">Calma</h2>
+                <h2 class="plant_latin-name">/Tristitia Profunda</h2>
+                <h2 class="plant_family-name">Introspective Family</h2>
+                <p id="emotionDescriptionText" class="plant_description">La tristeza se percibe como una sensación de
+                    peso en el cuerpo, especialmente en el pecho y los hombros, y tiende a ralentizar nuestro ritmo.
+                    Mentalmente, es un estado profundo y reflexivo, que invita a la introspección y a procesar lo que
+                    hemos vivido.</p>
+
+                <p class="plant_instruction">
+                    La tristeza prepara el terreno para un nuevo ciclo de crecimiento. Date el permiso de sentir y
+                    expresar esta emoción; hablar con alguien de confianza puede ayudarte a procesarla.
+                </p>
+                <button class="general_button plant_button" type="button"
+                    onclick="window.location.href='explorar.html'">Redescrubrir</button>
+            </div>
+
+            <div class="plant_right">
+                <div class="plant_right-visual">
+                    <div class="plant_visual-title">Tristitia Profunda</div>
+                    <div class="plant_visual-box" id="svgGenerator">
+                        <svg id="garden" viewBox="0 -150 800 600">
+                            <g id="empty0"></g>
+                            <g id="empty1"></g>
+                            <g id="empty2"></g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="plant_details">
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Clasificación: <span class="plant_details-content-text">
+                                Procesamiento y reflexión</span></h3>
+                        <div class="plant_details-content">
+                            <img class="plant_details-content-img" src="assets/images/sadness_seed.png" alt="semilla">
+                            <p>/Semilla</p>
+                        </div>
+
+                    </div>
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Características físicas:</h3>
+                        <ul class="plant_details-list">
+                            <li>Respiración pausada y profunda. </li>
+                            <li>Sensación de pesadez en el pecho y la cabeza. </li>
+                            <li>Tendencia a la introspección y el silencio. </li>
+                        </ul>
+                    </div>
+
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Recomendaciones de cuidado:</h3>
+                        <ul class="plant_details-list">
+                            <li>Date permiso para expresar la tristeza, ya sea hablando o escribiendo.</li>
+                            <li>Practica la gratitud, incluso en momentos difíciles.</li>
+                            <li>Si lo necesitas, recurre a un terapeuta o guía emocional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./assets/gsap/minified/gsap.min.js"></script>
+    <script src="./assets/gsap/minified/DrawSVGPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/plant_generator/util.js"></script>
+    <script src="js/plant_generator/generator.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardín de Emociones - Cultivar</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="header_logo-link">
+            <img src="assets/images/logo.png" alt="Logo Jardín de Emociones" class="header_logo">
+        </a>
+        <nav class="header_nav">
+            <a href="index.html" class="header_link">Inicio</a>
+            <a href="explorar.html" class="header_link">Explorar Emociones</a>
+            <a href="proyecto.html" class="header_link">El Proyecto</a>
+        </nav>
+    </header>
+
+    <main class="main-container plant">
+        <section class="plant_generation">
+            <div class="plant_column">
+                <h2 id="emotionTitle" class="plant_title">Esperanza</h2>
+                <h2 class="plant_latin-name">/Spes Lucida</h2>
+                <h2 class="plant_family-name">Energizing Family</h2>
+                <p id="emotionDescriptionText" class="plant_description">La esperanza se manifiesta como una sensación
+                    de apertura y ligereza en el pecho, una expansión que nos anima a proyectarnos hacia adelante.
+                    Mentalmente, se percibe como un destello de claridad, que ilumina nuevas posibilidades. </p>
+
+                <p class="plant_instruction">
+                    Aprovecha este momento para visualizar tus metas y conectarte con lo que te inspira.
+                </p>
+                <button class="general_button plant_button" type="button"
+                    onclick="window.location.href='explorar.html'">Redescrubrir</button>
+            </div>
+
+            <div class="plant_right">
+                <div class="plant_right-visual">
+                    <div class="plant_visual-title">Spes Lucida</div>
+                    <div class="plant_visual-box" id="svgGenerator">
+                        <svg id="garden" viewBox="0 -150 800 600">
+                            <g id="empty0"></g>
+                            <g id="empty1"></g>
+                            <g id="empty2"></g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="plant_details">
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Clasificación: <span class="plant_details-content-text">
+                                Apertura y proyección </span></h3>
+                        <div class="plant_details-content">
+                            <img class="plant_details-content-img" src="assets/images/hope_seed.png" alt="semilla">
+                            <p>/Semilla</p>
+                        </div>
+
+                    </div>
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Características físicas:</h3>
+                        <ul class="plant_details-list">
+                            <li>Sensación de ligereza en el pecho. </li>
+                            <li>Relajación en los músculos faciales. </li>
+                            <li>Incremento en la energía corporal.</li>
+                        </ul>
+                    </div>
+
+                    <div class="plant_details-item">
+                        <h3 class="plant_details-title">Recomendaciones de cuidado:</h3>
+                        <ul class="plant_details-list">
+                            <li>Visualiza metas a corto y largo plazo.</li>
+                            <li>Realiza caminatas al aire libre bajo el sol.</li>
+                            <li>Escucha música inspiradora para alimentar esta emoción.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./assets/gsap/minified/gsap.min.js"></script>
+    <script src="./assets/gsap/minified/DrawSVGPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/plant_generator/util.js"></script>
+    <script src="js/plant_generator/generator.js"></script>
+
+</body>
+
+</html>
