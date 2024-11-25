@@ -168,7 +168,7 @@ body {
     padding: 2rem;
     gap: 1rem;
     margin: 0 auto;
-    min-height: 25rem;
+    min-height: 20rem;
     height: auto;
 }
 
@@ -561,6 +561,105 @@ body {
     display: inline-block;
     line-height: 1;
 }
+
+/* Sección de Anatomía de la Planta */
+.plant_anatomy {
+   
+    padding: 2rem;
+    background-color: var(--color-highlight); /* Usa el color de fondo del proyecto */
+}
+
+.plant_anatomy-title {
+    font-size: 2rem;
+    
+    font-weight: normal;
+    color: var(--color-text); 
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Contenedor principal */
+.plant_anatomy-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Columnas laterales */
+
+
+/* Elementos individuales (Tallo, Hojas, etc.) */
+.plant_anatomy-item {
+    position: absolute;
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    background-color: var(--color-highlight);
+    max-width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#plant_anatomy-flower{
+    top:0;
+    left:0;
+
+}
+#plant_anatomy-stem{
+    top:8rem;
+    left:0;
+}
+#plant_anatomy-leaf{
+    top:16rem;
+    left:0;
+}
+#plant_anatomy-soil{
+    bottom:16rem;
+    right:0;
+}
+#plant_anatomy-seed{
+    bottom:8rem;
+    right:0;
+}
+#plant_anatomy-root{
+    bottom:0;
+    right:0;
+}
+.plant_anatomy-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-handwriting);
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.plant_anatomy-item-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Visual central */
+.plant_anatomy-visual {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#plant_anatomy-img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
 
 /* Estilos específicos para la página de proyecto */
 
