@@ -1,7 +1,7 @@
 {
     "name": "nombre de planta",
-    "number_plants": 4,
-    "min_separation": 150,
+    "number_plants": 3,
+    "min_separation": 100,
     "global": {
         "components": ["root", "background", "seed", "soil"],
         "grow_duration": 3,
@@ -10,7 +10,7 @@
     "plants": [
         {
             "source": "./assets/images/Hope/SVG/hope_plant_100x100-1-4.svg",
-            "scale": 4.5,
+            "scale": 2.5,
             "offset": {"x": 0, "y": 0},
             "components": {
                 "stem": {

@@ -71,15 +71,15 @@ function generateSinglePlant(plantConfiguration, animateGlobalComponents) {
         "x": viewBox.width / 4,
         "y": 0
     }
-    plantConfiguration.scale = 4;
+    plantConfiguration.scale = 3;
     generatePlant(5, position, plantConfiguration, svgGarden, animateGlobalComponents);
 }
 
 function generateInitialPositions(minSeparation, garden) {
     let initialPositions = [];
     const viewBox = garden.viewBox.baseVal;
-    let currentX = 20 + _.random(10);
-    while (currentX < viewBox.width - 300) {
+    let currentX = minSeparation/4;
+    while (currentX < viewBox.width - minSeparation) {
         initialPositions.push({
             x: currentX,
             y: 0
