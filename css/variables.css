@@ -28,87 +28,84 @@
     font-style: normal;
 }
 
-/* Island Moments */
-@font-face {
-    font-family: 'Island Moments';
-    src: url('../assets/fonts/Island_Moments/IslandMoments-Regular.woff2') format('woff2'),
-        url('../assets/fonts/Island_Moments/IslandMoments-Regular.woff') format('woff'),
-        url('../assets/fonts/Island_Moments/IslandMoments-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/*Gabarito*/
 @font-face {
     font-family: 'Gabarito';
     src: url('../assets/fonts/Gabarito/Gabarito-Bold.woff2') format('woff2'),
-    url('../assets/fonts/Gabarito/Gabarito-Bold.woff') format('woff'),
-    url('../assets/fonts/Gabarito/Gabarito-Bold.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+        url('../assets/fonts/Gabarito/Gabarito-Bold.woff') format('woff'),
+        url('../assets/fonts/Gabarito/Gabarito-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*Delphin*/
-
 @font-face {
     font-family: 'OPTIDelphin';
     src: url('../assets/fonts/Delphin/OPTIDelphin-One.woff2') format('woff2'),
-    url('../assets/fonts/Delphin/OPTIDelphin-One.woff') format('woff'),
-    url('../assets/fonts/Delphin/OPTIDelphin-One.ttf') format('truetype');
+        url('../assets/fonts/Delphin/OPTIDelphin-One.woff') format('woff'),
+        url('../assets/fonts/Delphin/OPTIDelphin-One.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    
 }
-
-
 
 :root {
     /* Colores base */
     --color-background: #F2EDE4;
-    --color-background-dark:212121;
+    --color-background-dark: 212121;
     --color-primary: #0C0D0B;
     --color-secondary: #D9483B;
     --color-text: #0C0D0B;
     --color-textlight: #F2EDE4;
     --color-highlight: #D9D3C7;
 
- /* Colores de botones */
-    --btn-bg-default: var(--color-secondary); /* Color principal del botón */
-    --btn-bg-hover: #b83f34; /* Variación del color secundario para hover */
-    --btn-bg-active: #a1362e; /* Variación más oscura del secundario para active */
-    --btn-bg-disabled: #e3e0db; /* Variación clara, basada en el fondo */
-    --btn-text-color: var(--color-textlight); /* Texto claro sobre color secundario */
-    --btn-text-disabled: #a8a29e; /* Texto gris para botón deshabilitado */
+    /* Colores de botones */
+    --btn-bg-default: var(--color-secondary);
+    --btn-bg-hover: #b83f34;
+    --btn-bg-active: #a1362e;
+    --btn-bg-disabled: #e3e0db;
+    --btn-text-color: var(--color-textlight);
+    --btn-text-disabled: #a8a29e;
 
     /*Colores Emociones*/
-
-    --color-emotion-esperanza: #15AF4F; 
-    --color-emotion-alegria: #E9A000;  
-    --color-emotion-calma:#bb7171;     
-    --color-emotion-tristeza: #2A4C8C;  
-    --color-emotion-rabia: #CB1E1A;     
+    --color-emotion-esperanza: #15AF4F;
+    --color-emotion-alegria: #E9A000;
+    --color-emotion-calma: #bb7171;
+    --color-emotion-tristeza: #2A4C8C;
+    --color-emotion-rabia: #CB1E1A;
     --color-emotion-ansiedad: #6A3F8F;
 
-     /*Colores Variacion Emociones para el generador de plantas*/
-
-     --esperanza-variacion-1: #15AF4F; 
-     --esperanza-variacion-2: #1DD44F;
-     --esperanza-variacion-3: #052B14;
-     --esperanza-variacion-4: #0A5426;
-
-     --alegria-variacion-1: #E9A000;  
-     --alegria-variacion-2: #F9B538;  
-     --alegria-variacion-3: #F5DF31 ;  
-     --alegria-variacion-4: #E77F25;  
-
-     --calma-variacion-1:#bb7171;     
-     --tristeza-variacion-1: #2A4C8C;  
-     --rabia-variacion-1: #CB1E1A;     
-     --ansiedad-variacion-1: #6A3F8F;
+    --color-emotion-hover: transparent;
 
 
     /* Tipografía */
     --font-main: 'EB Garamond', serif;
-    --font-secondary: 'Gabarito', sans-serif ;
+    --font-secondary: 'Gabarito', sans-serif;
     --font-handwriting: 'OPTIDelphin', serif;
     --font-size-base: 1rem;
+
+    --font-size-small: 0.8rem;
+    --font-size-large: 1.2rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xxxl: 2.5rem;
+
+    --line-height-small: 1.2;
+    --line-height-medium: 1.5;
+    --line-height-large: 1.8;
+
+    /* Espaciado */
+    --gap-small: 0.5rem;
+    --gap-medium: 1rem;
+    --gap-large: 2rem;
+    --padding-small: 1rem;
+    --padding-medium: 2rem;
+    --padding-large: 3rem;
+
+    /* Otros */
+
+    --radius-small: 4px;
+    --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    --border-radius: 0.5rem;
+    --title-font-size-large: 2.5rem;
+    --gap-item: 1.5rem;
 }
