@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header class="header">
         <a href="index.html" class="header_logo-link">
@@ -21,29 +23,78 @@
     </header>
 
     <main class="main-container project">
+        <!-- Introducción -->
         <section class="project_intro">
             <h1 class="pro_title">Jardín de Emociones</h1>
-            <p class="project_text">Un proyecto que florece para explorar las emociones humanas a través de experiencias interactivas inspiradas en la naturaleza y en el simbolismo botánico.</p>
+            <p class="project_text">
+                ¿Por qué no ver las emociones como vemos a las plantas? Algunas son fáciles de cuidar; otras requieren
+                más tiempo y dedicación, pero todas pueden florecer. Así nació este proyecto.
+            </p>
         </section>
 
-        <section class="project_description">
-            <div class="text-box project_text-box" data-scroll="fade-in">
-                <h2 class="project_subtitle">Descripción</h2>
-                <p class="project_paragraph">El Jardín de Emociones es una plataforma digital diseñada para ofrecer a los usuarios una forma visual e interactiva de explorar sus emociones. Cada emoción es representada como una planta única que crece y se transforma de acuerdo con la interacción del usuario.</p>
+        <!-- Descripción -->
+        <section class="project_description text-box project_text-box" data-scroll="fade-in">
+            <h2 class="project_subtitle">Descripción</h2>
+            <p class="project_paragraph">
+                El Jardín de Emociones es una plataforma que representa nuestras emociones como plantas vivas. Cada
+                planta crece, cambia y refleja los matices de nuestras emociones.
+            </p>
+        </section>
+
+        <!-- Motivación -->
+        <section class="project_motivation text-box project_text-box" data-scroll="fade-in">
+            <h2 class="project_subtitle">Motivación</h2>
+            <p class="project_paragraph">
+                La inspiración surge de la naturaleza, que nos enseña que todo crecimiento lleva tiempo. Queremos crear
+                un espacio donde puedas explorar tus emociones con empatía y sin juicios.
+            </p>
+        </section>
+
+        <!-- Cronología -->
+        <section class="project_timeline">
+            <div class="timeline_item" data-scroll="fade-in">
+                <h3 class="timeline_title">Concepto Inicial</h3>
+                <p class="timeline_description">
+                    Todo comenzó con la idea de representar emociones a través de elementos visuales. Nos inspiramos en
+                    cuadernos botánicos y en el simbolismo de las plantas.
+                </p>
+            </div>
+            <div class="timeline_item" data-scroll="fade-in">
+                <h3 class="timeline_title">Diseño de Plantas</h3>
+                <p class="timeline_description">
+                    Cada emoción fue representada con formas botánicas. La "Esperanza" es luminosa y expansiva, mientras
+                    que la "Tristeza" se pliega sobre sí misma con delicadeza.
+                </p>
+            </div>
+            <section class="plant-carousel">
+                <h3 class="carousel-title">Explora las formas botánicas</h3>
+                <div class="carousel-container">
+                    <button type="button" class="carousel-button prev" aria-label="Previous">&lt;</button>
+                    <div class="carousel-track">
+                        <img src="assets/images/Hope.png" alt="Esperanza" class="carousel-item">
+                        <img src="assets/images/Sadness.png" alt="Tristeza" class="carousel-item">
+                        <img src="assets/images/Joy.png" alt="Alegría" class="carousel-item">
+                        <img src="assets/images/Calm.png" alt="Calma" class="carousel-item">
+                        <img src="assets/images/Anxiety.png" alt="Ansiedad" class="carousel-item">
+                        <img src="assets/images/Rage.png" alt="Rabia" class="carousel-item">
+                    </div>
+                    <button type="button" class="carousel-button next" aria-label="Next">&gt;</button>
+                </div>
+            </section>
+            <div class="timeline_item" data-scroll="fade-in">
+                <h3 class="timeline_title">Desarrollo</h3>
+                <p class="timeline_description">
+                    Usamos herramientas digitales para dar vida a las plantas, logrando una interacción visual rica que
+                    responde al usuario.
+                </p>
             </div>
         </section>
 
-        <section class="project_motivation">
-            <div class="text-box project_text-box" data-scroll="fade-in">
-                <h2 class="project_subtitle">Motivación</h2>
-                <p class="project_paragraph">Este proyecto nace de la necesidad de representar las emociones como un proceso natural, donde cada experiencia emocional es una semilla que puede ser nutrida y cuidada para su crecimiento y comprensión.</p>
-            </div>
-        </section>
-
-        <section class="project-inspiration">
-            <div class="text-box project_text-box" data-scroll="fade-in">
-                <h2 class="project_subtitle">Inspiración</h2>
-                <p class="project_paragraph">Inspirado en la naturaleza, los cuadernos botánicos antiguos y la simbología floral, el Jardín de Emociones busca reconectar al usuario con sus emociones, de la misma manera en que la naturaleza nos permite conectar con el entorno.</p>
+        <section class="project_cta" data-scroll="fade-in">
+            <div class="cta_box">
+                <h2 class="cta_title">¿Quieres explorar más?</h2>
+                <button class="general_button" onclick="window.location.href='explorar.html'">Explorar
+                    Emociones</button>
             </div>
         </section>
     </main>
@@ -51,6 +102,8 @@
     <footer class="footer"></footer>
 
     <script src="js/main.js"></script>
-
+    <script src="js/animation.js"></scriptsrc></script>
+    <script src="./assets/gsap/minified/gsap.min.js"></script>
 </body>
+
 </html>

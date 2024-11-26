@@ -3,30 +3,44 @@ gsap.config({ trialWarn: false });
 
 const ns = "http://www.w3.org/2000/svg";
 
-let globalConfig = {
-}
+let globalConfig = {}
+
+const plantsGeneratedEvent = new Event("plants_generated");
+
 
 const emotion = localStorage.getItem("emotionKey");
 
-const mainTimeline = gsap.timeline();
-mainTimeline.addLabel("start", 0);
+const gardenTimeline = gsap.timeline();
+gardenTimeline.addLabel("start", 0);
+gardenTimeline.pause();
+
+const anatomyPlantTimeline = gsap.timeline();
+anatomyPlantTimeline.addLabel("start", 1);
+anatomyPlantTimeline.pause();
+
 let timelines = [];
 
 const mapTypeName = {
+    "stem": "stem",
+    "flower": "flower",
+    "seed": "seed",
+    "background": "background",
+    "leaf": "leaf",
+    "soil": "soil",
+    "root": "root",
     "tallos": "stem",
-    "Tallo": "stem",
-    "Hojas": "leaf",
-    "Flores": "flower",
-    "Semilla": "seed",
-    "Suelo": "soil",
-    "Raices": "root",
-    "Fondo": "background"
+    "tallo": "stem",
+    "hojas": "leaf",
+    "flores": "flower",
+    "semilla": "seed",
+    "suelo": "soil",
+    "raices": "root",
+    "fondo": "background"
 }
 
 function loadPlantTypeConfigurationFile(type) {
     const configuration = localStorage.getItem(`${type}_configuration`);
     if (configuration !== null) {
-        console.log("loadedConfiguration", configuration);
         return Promise.resolve(configuration);
     }
 
@@ -52,57 +66,76 @@ function generate(configuration) {
     const initialPositions = generateInitialPositions(minSeparation, svgGarden);
     const sampledPositions = _.sampleSize(initialPositions, numberOfPlants);
     const plantConfiguration = _.sample(configuration.plants);
-
     for (let i = 0; i < numberOfPlants; i++) {
-        generatePlant(i, sampledPositions[i], plantConfiguration, svgGarden);
+        generatePlant(i, sampledPositions[i], plantConfiguration, svgGarden, gardenTimeline);
     }
 
-
-    generateSinglePlant(plantConfiguration, true);
+    gardenTimeline.play();
+    selectedPlantConfiguration = plantConfiguration;
+    generateSinglePlant(plantConfiguration, true, anatomyPlantTimeline);
+    
 }
 
-function generateSinglePlant(plantConfiguration, animateGlobalComponents) {
+function generateSinglePlant(plantConfiguration, animateGlobalComponents, timeline) {
 
 
     const svgGarden = document.getElementById("plant_anatomy-img");
     const viewBox = svgGarden.viewBox.baseVal;
 
     const position = {
-        "x": viewBox.width / 4,
+        "x": 150,
         "y": 0
     }
-    console.log(position.x)
     plantConfiguration.scale = 3;
-    generatePlant(5, position, plantConfiguration, svgGarden, animateGlobalComponents);
+    generatePlant(5, position, plantConfiguration, svgGarden, timeline, animateGlobalComponents);
+    svgGarden.dispatchEvent(plantsGeneratedEvent);
 }
 
 function generateInitialPositions(minSeparation, garden) {
     let initialPositions = [];
     const viewBox = garden.viewBox.baseVal;
-    let currentX = -100;
-    while (currentX < viewBox.width - 100) {
+    let currentX = 0;
+    while (currentX < viewBox.width - minSeparation) {
         initialPositions.push({
             x: currentX,
             y: 0
         })
-        currentX += _.random(minSeparation, minSeparation + 10);
+        currentX += minSeparation;
     }
     return initialPositions;
 
 }
 
-function generatePlant(counter, initialPosition, configuration, garden, animateGlobalComponents = false) {
+function generatePlant(counter, initialPosition, configuration, garden, timeline, animateGlobalComponents = false) {
 
     const plantSuffix = `${configuration.name}_${counter}`
     const plant = createElements(configuration, plantSuffix, initialPosition, garden);
 
     for (const group of plant.children) {
-        prepareElementForGrow(configuration, group);
-        createElementGroupAnimation(configuration, group, animateGlobalComponents);
+        const overridedConfiguration = overrideConfiguration(configuration, group, animateGlobalComponents)
+        prepareElementForGrow(overridedConfiguration, group);
+        createElementGroupAnimation(overridedConfiguration, group, timeline);
     }
 
-    mainTimeline.play();
+}
 
+function overrideConfiguration(configuration, group, animateGlobalComponents){
+    const rawType = group.id;
+    const type = mapTypeName[rawType.toLowerCase()];
+    let overridedConfiguration = {};
+
+
+    if (animateGlobalComponents && globalConfig.components.includes(type)) {
+        overridedConfiguration.components = {};
+        overridedConfiguration.components[type] = {
+            "grow_delay": globalConfig.grow_delay,
+            "grow_duration": globalConfig.grow_duration
+        }
+    }
+    else {
+        overridedConfiguration = configuration;
+    }
+    return overridedConfiguration;
 }
 
 function initPlantTimeline() {
@@ -110,8 +143,9 @@ function initPlantTimeline() {
 }
 
 function prepareElementForGrow(configuration, group) {
-    const type = group.id;
-    const groupConfiguration = configuration.components[mapTypeName[type]];
+    const rawType = group.id;
+    const type = mapTypeName[rawType.toLowerCase()];
+    const groupConfiguration = configuration.components[type];
     if (groupConfiguration === null || groupConfiguration === undefined) {
         return
     }
@@ -132,6 +166,7 @@ function prepareElementForGrow(configuration, group) {
             options.transformOrigin = `${groupConfiguration.origin.x_percent}% ${groupConfiguration.origin.y_percent}%`;
         }
 
+        
         if (options != {}) {
             gsap.set(element, options);
         }
@@ -140,40 +175,24 @@ function prepareElementForGrow(configuration, group) {
 
 }
 
-function createElementGroupAnimation(configuration, group, animateGlobalComponents) {
+function createElementGroupAnimation(configuration, group, timeline) {
     const rawType = group.id;
-    const type = mapTypeName[rawType];
-    let overridedConfiguration = {};
-
-
-    if (animateGlobalComponents && globalConfig.components.includes(type)) {
-        overridedConfiguration.components = {};
-        overridedConfiguration.components[type] = {
-            "grow_delay": globalConfig.grow_delay,
-            "grow_duration": globalConfig.grow_duration
-        }
-    }
-    else {
-        overridedConfiguration = configuration;
-    }
-
-    const groupConfiguration = overridedConfiguration.components[type];
+    const type = mapTypeName[rawType.toLowerCase()];
+    const groupConfiguration = configuration.components[type];
     if (groupConfiguration === null || groupConfiguration === undefined) {
         return
     }
-    let timeline = initPlantTimeline();
-    timeline.addLabel("start", 0);
+    let plantTimeline = initPlantTimeline();
+    plantTimeline.addLabel("start", 0);
     if (type === "stem" || type === "soil" || type === "background" || type === "seed" || type === "root") {
-
-        createElementAnimation(groupConfiguration, timeline, type, group);
+        createElementAnimation(groupConfiguration, plantTimeline, type, group);
     }
     else {
         for (const upperElement of group.children) {
-            createElementAnimation(groupConfiguration, timeline, type, upperElement);
+            createElementAnimation(groupConfiguration, plantTimeline, type, upperElement);
         }
     }
-
-    mainTimeline.add(timeline, "start");
+    timeline.add(plantTimeline, "start");
 }
 
 function createElementAnimation(configuration, timeline, type, element) {
@@ -218,12 +237,16 @@ function createElementAnimation(configuration, timeline, type, element) {
 
 function animateTrails(stem, timeline, growDuration, growDelay) {   
     timeline.from(stem.querySelectorAll("path,rect,ellipse,line,polyline"), {
-        drawSVG: 1,
+        drawSVG: 0,
         duration: growDuration,
     }, `start+=${growDelay}`);
-    timeline.fromTo(stem.querySelectorAll("polygon"), {
-        opacity: 0,
-    }, { opacity: 1, duration: growDuration, stagger: 0.05 }, `start+=${growDelay}`);
+    const poligons = stem.querySelectorAll("polygon");
+    if(poligons.length != 0){
+        timeline.fromTo(stem.querySelectorAll("polygon"), {
+            opacity: 0,
+        }, { opacity: 1, duration: growDuration, stagger: 0.05 }, `start+=${growDelay}`);
+    }
+   
 }
 
 function animatePlantComponent(component, timeline, growDuration, growDelay, animationStrategy) {
@@ -272,9 +295,7 @@ function initTransformElements(configuration, plant, totalOffset) {
         scaleX: configuration.scale,
         scaleY: configuration.scale
     }
-    if (Object.hasOwn(configuration, "origin")) {
-        options.transformOrigin = `${configuration.origin.x_percent}% ${configuration.origin.y_percent}%`;
-    }
+        options.transformOrigin = `50% 0%`;
     gsap.set(plant, options);
 }
 
