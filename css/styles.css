@@ -566,7 +566,8 @@ body {
 .plant_anatomy {
    
     padding: 2rem;
-    background-color: var(--color-highlight); /* Usa el color de fondo del proyecto */
+    background-image: url(../assets/images/texture_paper.webp); /* Usa el color de fondo del proyecto */
+
 }
 
 .plant_anatomy-title {
@@ -594,37 +595,38 @@ body {
 /* Elementos individuales (Tallo, Hojas, etc.) */
 .plant_anatomy-item {
     position: absolute;
-    border: 1px solid var(--color-primary);
+ 
     padding: 1rem;
-    background-color: var(--color-highlight);
-    max-width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  
+    max-width: 20%;
+    
 }
 
 #plant_anatomy-flower{
     top:0;
-    left:0;
-
+    left:15rem;
+    
 }
+
 #plant_anatomy-stem{
-    top:8rem;
-    left:0;
+    top:18rem;
+    left:20rem;
 }
 #plant_anatomy-leaf{
-    top:16rem;
-    left:0;
+    top:28rem;
+    left:15rem;
 }
 #plant_anatomy-soil{
-    bottom:16rem;
-    right:0;
+    bottom:25rem;
+    right:25rem;
 }
 #plant_anatomy-seed{
-    bottom:8rem;
-    right:0;
+    bottom:15rem;
+    right:25rem;
 }
 #plant_anatomy-root{
-    bottom:0;
-    right:0;
+    bottom:5rem;
+    right:20rem;
 }
 .plant_anatomy-item-title {
     font-size: 1.5rem;
@@ -645,9 +647,9 @@ body {
 .plant_anatomy-visual {
    margin: auto;
    width: 80%;
-    border: 1px solid var(--color-primary);
+
     padding: 1rem;
-    background-color: var(--color-secondary);
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
