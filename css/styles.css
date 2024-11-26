@@ -6,7 +6,7 @@ body {
     color: var(--color-text);
     font-size: var(--font-size-base);
     line-height: 1.5;
-    margin: 0;
+
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -17,7 +17,7 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     min-height: 80vh;
 }
 
@@ -425,13 +425,18 @@ body {
     margin-bottom: 1rem;
 }
 
+.plant_generation .CTA {
+    text-align: left;
+}
+
 .CTA {
     font-size: 1.2rem;
-
+    text-align: center;
     font-weight: bolder;
     line-height: 1.8;
     color: var(--color-secondary);
-    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .plant_instruction {
@@ -483,11 +488,11 @@ body {
 }
 
 .plant_visual-box {
-   background-color: var(--color-highlight);
+    background-color: var(--color-highlight);
     border: 1px solid #ccc;
     border-bottom: 0.8rem solid #C7B299;
     width: 100%;
-   
+
     /* Altura del contenedor visual */
 
 
@@ -542,8 +547,8 @@ body {
 
 .plant_details-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    
+   
     font-size: 1rem;
     color: var(--color-text);
 }
@@ -562,21 +567,81 @@ body {
     line-height: 1;
 }
 
+/* Enlace principal */
+.anatomy_link {
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    /* Centra el SVG con el texto */
+    gap: 0.5rem;
+    /* Espaciado entre el SVG y el texto */
+    position: relative;
+}
+
+.anatomy_link:hover {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+/* SVG escalado al texto */
+.anatomy_svg {
+    width: 1em;
+    /* Escala según el tamaño del texto */
+    height: 1em;
+    /* Escala según el tamaño del texto */
+    animation: blink 1.5s infinite;
+    /* Parpadeo continuo */
+    transition: transform 0.3s ease, fill 0.3s ease;
+    /* Suaviza los efectos de hover */
+}
+
+.anatomy_svg:hover {
+    transform: scale(1.3) rotate(15deg);
+    /* Efecto de escala y rotación */
+    fill: var(--color-secondary);
+    /* Cambia el color durante el hover */
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
 /* Sección de Anatomía de la Planta */
 .plant_anatomy {
-   
+
     padding: 2rem;
-    background-image: url(../assets/images/texture_paper.webp); /* Usa el color de fondo del proyecto */
+
 
 }
 
 .plant_anatomy-title {
     font-size: 2rem;
-    
+
     font-weight: normal;
-    color: var(--color-text); 
+    color: var(--color-text);
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.plant_anatomy-instruction {
+    font-size: 1.5rem;
+
+    font-family: var(--font-handwriting);
+    color: var(--color-secondary);
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 /* Contenedor principal */
@@ -595,62 +660,73 @@ body {
 /* Elementos individuales (Tallo, Hojas, etc.) */
 .plant_anatomy-item {
     position: absolute;
- 
+
     padding: 1rem;
-  
+
     max-width: 20%;
-    
+
 }
 
-#plant_anatomy-flower{
-    top:0;
-    left:15rem;
-    
+#plant_anatomy-flower {
+    top: 2rem;
+    left: 15rem;
+
 }
 
-#plant_anatomy-stem{
-    top:18rem;
-    left:20rem;
+
+#plant_anatomy-leaf {
+    top: 10rem;
+    left: 15rem;
 }
-#plant_anatomy-leaf{
-    top:28rem;
-    left:15rem;
+
+#plant_anatomy-stem {
+    top: 20rem;
+    left: 15rem;
 }
-#plant_anatomy-soil{
-    bottom:25rem;
-    right:25rem;
+
+#plant_anatomy-soil {
+    bottom: 20rem;
+    right: 15rem;
+
+
 }
-#plant_anatomy-seed{
-    bottom:15rem;
-    right:25rem;
+
+#plant_anatomy-seed {
+    bottom: 10rem;
+    right: 15rem;
 }
-#plant_anatomy-root{
-    bottom:5rem;
-    right:20rem;
+
+#plant_anatomy-root {
+    bottom: 2rem;
+    right: 15rem;
 }
+
 .plant_anatomy-item-title {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: var(--font-handwriting);
     color: var(--color-secondary);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .plant_anatomy-item-text {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--color-text);
-    margin: 0;
+   
+    text-align: center;
 }
 
 /* Visual central */
 .plant_anatomy-visual {
-   margin: auto;
-   width: 80%;
+    margin: auto;
+    width: 80%;
 
     padding: 1rem;
-   
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-highlight);
 }
 
 

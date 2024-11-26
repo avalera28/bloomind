@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Fondo">
+    <ellipse cx="49.5" cy="75.858" rx="9.5" ry="7.983" fill="#e9a000" opacity=".33"/>
+  </g>
+  <g id="Raices">
+    <g>
+      <path d="M55.869,72.549h4.358c.624,0,1.13.506,1.13,1.13v1.379c0,.624.506,1.13,1.13,1.13h.959c.624,0,1.13.506,1.13,1.13v1.638c0,.624.506,1.13,1.13,1.13h1.112" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".202"/>
+      <path d="M56.296,77.642h3.566c.511,0,.925.414.925.925v1.128c0,.511.414.925.925.925h.785c.511,0,.925.414.925.925v1.34c0,.511.414.925.925.925h.91" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M56.438,75.136h3.339c.478,0,.866.388.866.866v1.056c0,.478.388.866.866.866h.735c.478,0,.866.388.866.866v1.255c0,.478.388.866.866.866h.852" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".154"/>
+      <path d="M50.679,83.001v1.917c0,.434.352.785.785.785h1.132c.434,0,.785.352.785.785v1.042c0,.434.352.785.785.785h5.572c.434,0,.785.352.785.785v2.29" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M53.239,82.005h3.277c.389,0,.705.316.705.705v1.148c0,.389.316.705.705.705h2.321c.178,0,.349.067.48.188l3.32,3.084" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M55.246,80.085h1.81c.287,0,.562.114.765.317l1.494,1.494c.203.203.478.317.765.317h1.034c.598,0,1.082.484,1.082,1.082v.065c0,.287.114.562.317.765l1.768,1.768" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+    </g>
+    <g>
+      <path d="M43.143,72.549h-4.358c-.624,0-1.13.506-1.13,1.13v1.379c0,.624-.506,1.13-1.13,1.13h-.959c-.624,0-1.13.506-1.13,1.13v1.638c0,.624-.506,1.13-1.13,1.13h-1.112" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".202"/>
+      <path d="M42.716,77.642h-3.566c-.511,0-.925.414-.925.925v1.128c0,.511-.414.925-.925.925h-.785c-.511,0-.925.414-.925.925v1.34c0,.511-.414.925-.925.925h-.91" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M42.574,75.136h-3.339c-.478,0-.866.388-.866.866v1.056c0,.478-.388.866-.866.866h-.735c-.478,0-.866.388-.866.866v1.255c0,.478-.388.866-.866.866h-.852" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".154"/>
+      <path d="M48.333,83.001v1.917c0,.434-.352.785-.785.785h-1.132c-.434,0-.785.352-.785.785v1.042c0,.434-.352.785-.785.785h-5.572c-.434,0-.785.352-.785.785v2.29" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M45.773,82.005h-3.277c-.389,0-.705.316-.705.705v1.148c0,.389-.316.705-.705.705h-2.321c-.178,0-.349.067-.48.188l-3.32,3.084" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+      <path d="M43.766,80.085h-1.81c-.287,0-.562.114-.765.317l-1.494,1.494c-.203.203-.478.317-.765.317h-1.034c-.598,0-1.082.484-1.082,1.082v.065c0,.287-.114.562-.317.765l-1.768,1.768" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+    </g>
+    <path d="M49.131,81.929c-.012-.047-.007,3.172-.003,4.982.001.663.539,1.199,1.202,1.199h0c.664,0,1.202.538,1.202,1.202v.877c0,.664-.538,1.202-1.202,1.202h-6.555c-.664,0-1.202.538-1.202,1.202v.703c0,.672.549,1.213,1.221,1.202,2.041-.033,5.924-.083,5.909.022-.02.142,0,4.519,0,4.519" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".165"/>
+  </g>
+  <g id="Semilla">
+    <g>
+      <path d="M50.754,73.176c.695,1.564.372,2.985-.59,4.319-.093.129-.208.245-.324.355-.099.093-.188.144-.274.143-.086,0-.175-.05-.274-.143-.116-.109-.231-.226-.324-.355-.962-1.334-1.285-2.756-.59-4.319-.513.848-.547,1.77-.358,2.713.133.663.448,1.251.831,1.802.3.431.658.746.688,1.281.002.036.004.194.027.226.023-.032.025-.19.027-.226.03-.535.388-.85.688-1.281.383-.551.698-1.139.831-1.802.19-.944.155-1.865-.358-2.713Z" fill="#0c0c0c"/>
+      <circle cx="49.566" cy="73.275" r=".435" fill="#f29100"/>
+      <circle cx="49.566" cy="74.609" r=".435" fill="#f8b133"/>
+      <circle cx="49.566" cy="75.942" r=".435" fill="#f3980f"/>
+      <g>
+        <g id="_Repetición_radial_" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="51.263" cy="81.311" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-2" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="49.151" cy="81.617" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-3" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="47.07" cy="81.138" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-4" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="45.304" cy="79.939" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-5" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="44.09" cy="78.184" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-6" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="43.592" cy="76.109" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-7" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="43.877" cy="73.992" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-8" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="44.907" cy="72.124" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-9" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="46.543" cy="70.753" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-10" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="48.563" cy="70.066" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-11" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="50.696" cy="70.154" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-12" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="52.652" cy="71.008" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-13" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="54.167" cy="72.51" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-14" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="55.039" cy="74.458" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-15" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="55.147" cy="76.59" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-16" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="54.479" cy="78.616" r=".313" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-17" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="53.122" cy="80.264" r=".313" fill="#0c0c0c"/>
+        </g>
+      </g>
+      <g>
+        <g id="_Repetición_radial_-18" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="51.58" cy="80.001" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-19" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="49.955" cy="80.515" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-20" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="48.253" cy="80.409" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-21" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="46.706" cy="79.693" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-22" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="45.522" cy="78.468" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-23" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="44.86" cy="76.897" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-24" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="44.81" cy="75.193" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-25" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="45.38" cy="73.588" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-26" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="46.49" cy="72.295" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-27" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="47.993" cy="71.491" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-28" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="49.685" cy="71.284" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-29" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="51.337" cy="71.703" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-30" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="52.725" cy="72.69" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-31" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="53.665" cy="74.112" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-32" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="54.026" cy="75.777" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-33" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="53.764" cy="77.461" r=".25" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-34" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="52.909" cy="78.936" r=".25" fill="#0c0c0c"/>
+        </g>
+      </g>
+      <g>
+        <g id="_Repetición_radial_-35" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="53.18" cy="81.915" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-36" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="50.72" cy="82.873" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-37" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="48.08" cy="82.875" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-38" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="45.617" cy="81.924" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-39" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="43.665" cy="80.148" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-40" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="42.486" cy="77.787" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-41" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="42.24" cy="75.158" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-42" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="42.96" cy="72.62" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-43" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="44.547" cy="70.511" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-44" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="46.79" cy="69.119" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-45" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="49.384" cy="68.631" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-46" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="51.979" cy="69.114" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-47" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="54.224" cy="70.501" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-48" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="55.818" cy="72.605" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-49" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="56.542" cy="75.143" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-50" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="56.302" cy="77.771" r=".387" fill="#0c0c0c"/>
+        </g>
+        <g id="_Repetición_radial_-51" data-name="&amp;lt;Repetición radial&amp;gt;">
+          <circle cx="55.127" cy="80.135" r=".387" fill="#0c0c0c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Suelo">
+    <line x1="32.62" y1="67.216" x2="66.463" y2="67.216" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width="2.015"/>
+    <line x1="32.691" y1="67.359" x2="66.534" y2="67.359" fill="none" stroke="#e9a000" stroke-dasharray=".403 .202" stroke-miterlimit="10" stroke-width=".403"/>
+  </g>
+  <g id="tallos">
+    <line x1="49.683" y1="66.596" x2="49.683" y2="7.18" fill="none" stroke="#0c0d0b" stroke-miterlimit="10" stroke-width=".403"/>
+  </g>
+  <g id="Hojas">
+    <path d="M49.639,58.383c0-.163-1.058-6.349-11.558-2.198,0,0,2.523,3.581,5.535,5.372,2.108,1.254,4.215,1.178,5.29,1.02l.562-.067h.285c.48.126,3.175.673,5.909-.953,3.012-1.791,5.535-5.372,5.535-5.372-10.5-4.151-11.558,2.035-11.558,2.198Z" fill="#0c0d0b"/>
+    <path d="M52.552,49.667c-2.239.715-2.593,2.401-2.593,2.401h-.573s-.353-1.686-2.593-2.401-5.439.511-5.439.511c1.216,3.32,4.699,3.473,4.699,3.473h7.239s3.483-.153,4.699-3.473c0,0-3.199-1.226-5.439-.511Z" fill="#0c0d0b"/>
+    <path d="M52.469,43.124c-2.239.715-2.593,2.401-2.593,2.401h-.573s-.353-1.686-2.593-2.401-5.439.511-5.439.511c1.216,3.32,4.699,3.473,4.699,3.473h7.239s3.483-.153,4.699-3.473c0,0-3.199-1.226-5.439-.511Z" fill="#0c0d0b"/>
+    <path d="M52.552,36.582c-2.239.715-2.593,2.401-2.593,2.401h-.573s-.353-1.686-2.593-2.401-5.439.511-5.439.511c1.216,3.32,4.699,3.473,4.699,3.473h7.239s3.483-.153,4.699-3.473c0,0-3.199-1.226-5.439-.511Z" fill="#0c0d0b"/>
+    <path d="M52.552,30.04c-2.239.715-2.593,2.401-2.593,2.401h-.573s-.353-1.686-2.593-2.401-5.439.511-5.439.511c1.216,3.32,4.699,3.473,4.699,3.473h7.239s3.483-.153,4.699-3.473c0,0-3.199-1.226-5.439-.511Z" fill="#0c0d0b"/>
+    <path d="M52.552,23.498c-2.239.715-2.593,2.401-2.593,2.401h-.573s-.353-1.686-2.593-2.401-5.439.511-5.439.511c1.216,3.32,4.699,3.473,4.699,3.473h7.239s3.483-.153,4.699-3.473c0,0-3.199-1.226-5.439-.511Z" fill="#0c0d0b"/>
+  </g>
+  <g id="Flores">
+    <path d="M55.482,12.044h-.233c-.066,3.071-2.585,5.55-5.672,5.55-3.128,0-5.674-2.545-5.674-5.674,0-3.089,2.482-5.61,5.557-5.673v1.001c-2.527.062-4.557,2.129-4.557,4.671,0,2.581,2.093,4.674,4.674,4.674s4.674-2.093,4.674-4.674c0-2.542-2.03-4.609-4.557-4.671v-1.237h-.117c-3.258,0-5.908,2.65-5.908,5.908s2.65,5.908,5.908,5.908c3.216,0,5.839-2.584,5.905-5.784Z" fill="#0c0d0b"/>
+    <g>
+      <g>
+        <path d="M61.211,6.249c-1.074-1.547-2.748-2.676-4.754-3.009-2.718-.451-5.333.677-6.908,2.714v8.499h-9.03c-.113-.694-.727-1.237-1.463-1.244-.824-.007-1.492.643-1.503,1.461-.011.813.642,1.466,1.473,1.471.829.006,1.506-.641,1.513-1.447,0-.003,0-.005,0-.008h19.519s0-.234,0-.234h-10.318s11.471-8.204,11.471-8.204Z" fill="#0c0c0c"/>
+        <path d="M37.445,14.669c.006-.871.699-1.556,1.564-1.545.87.012,1.56.712,1.553,1.577-.007.859-.722,1.563-1.579,1.555-.856-.008-1.544-.717-1.537-1.587Z" fill="#e9a000"/>
+      </g>
+      <path d="M52.205,8.035c.006-.871.699-1.556,1.564-1.545.87.012,1.56.712,1.553,1.577-.007.859-.722,1.563-1.579,1.555-.856-.008-1.544-.717-1.537-1.587Z" fill="#e9a000"/>
+    </g>
+  </g>
+</svg>
