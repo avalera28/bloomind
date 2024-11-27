@@ -6,13 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.fromTo(
     ".home_logo .b",
     { drawSVG: "0%" },
-    { drawSVG: "100%", duration: 3, ease: "power1.inOut", stagger: 0.3, fill: "#da483b" }
-  );
-  gsap.fromTo(
-    ".home_logo .c",
-    { drawSVG: "0%" },
     { drawSVG: "100%", duration: 3, ease: "power1.inOut", stagger: 0.3, fill: "#0c0c0c" }
   );
+  gsap.fromTo(
+    ".home_logo .a",
+    { drawSVG: "0%" },
+    { drawSVG: "100%", duration: 3, ease: "power1.inOut", stagger: 0.3, fill: "#da483b" }
+  );
+
 
   // Lógica del carrusel
   const track = document.querySelector(".carousel-track");

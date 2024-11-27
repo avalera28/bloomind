@@ -1,4 +1,4 @@
-// main.js - Archivo JavaScript principal para el proyecto Jardín de Emociones
+// main.js - Archivo JavaScript principal para el proyecto Bloomind
 
 gsap.registerPlugin(ScrollTrigger);
 
