@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const links = document.querySelectorAll('.header_link');
+    const currentPage = window.location.pathname.replace("/", "");
+
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('header_link--active');
+        }
+    });
+
     // Lógica del carrusel
     const track = document.querySelector(".carousel-track");
     if (track) {
@@ -43,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     }
-    
+
   });
   
 

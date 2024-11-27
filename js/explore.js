@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Resaltar el enlace activo en el encabezado
+    const links = document.querySelectorAll('.header_link');
+    const currentPage = window.location.pathname.replace("/", "");
+
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('header_link--active');
+        }
+    });
+
     // Elementos de la tarjeta
     const titleElement = document.querySelector('.explore-description_title');
     const subtitleElement = document.querySelector('.explore-description_subtitle');
@@ -158,16 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Resaltar el enlace activo en el encabezado
-    const links = document.querySelectorAll('.header_link');
-    const currentPage = window.location.pathname.replace("/", "");
 
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('header_link--active');
-        }
-    });
-    
+
 });
 
 
