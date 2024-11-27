@@ -8,14 +8,17 @@ body {
     line-height: var(--line-height-medium);
     display: flex;
     flex-direction: column;
-    padding: 0 var(--padding-medium);
-    }
+    padding: var(--padding-medium) 0;
+
+}
 
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     min-height: 80dvh;
+    margin-top: 5rem;
+
 }
 
 /* Encabezado */
@@ -25,6 +28,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--padding-small) var(--padding-medium);
+    position: fixed; /* Fijo en todas las páginas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: var(--color-background); /* Fondo por defecto */
+    height: 5rem; /* Altura fija */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header_logo {
@@ -33,16 +44,17 @@ body {
 
 .header_link {
     font-family: var(--font-main);
-    color: var(--color-primary);
+    color: var(--color-primary); /* Color por defecto */
     text-decoration: none;
     margin-left: var(--gap-medium);
-    font-size:var(--font-size-large);
+    font-size: var(--font-size-large);
 }
 
 .header_link--active {
     font-weight: bold;
     color: var(--color-secondary);
 }
+
 
 /* Estilos generales para secciones introductorias */
 
@@ -53,6 +65,7 @@ body {
     padding: var(--padding-medium);
     text-align: center;
     flex: 1;
+    justify-content: center;
 }
 
 .intro-section_title {
@@ -61,7 +74,7 @@ body {
 }
 
 .intro-section_text {
-    font-size:var(--font-size-large);
+    font-size: var(--font-size-large);
     margin-bottom: var(--gap-large);
 }
 
@@ -79,10 +92,82 @@ body {
 .general_button:hover {
     background-color: var(--btn-bg-hover);
 }
-/* Página de inicio */
 
-.main-container.home {
+/* Página de inicio */
+.home-page {
+    overflow-y: scroll;
+    background-color: var(--color-background);
+}
+
+.home-page .header {
+    background-color: var(--color-primary); /* Fondo diferente en home-page */
+}
+
+.home-page .header_link {
+    color: var(--color-textlight); /* Color del texto en home-page */
+}
+
+.home-page .header_link:hover {
+    color: var(--color-secondary); /* Color de hover en home-page */
+}
+
+/* Intro Overlay */
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+   }
+
+.big-text {
+    font-size: 10vw;
+    font-weight: bold;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secondary);
+}
+
+.big-text-svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0.5em;
+}
+
+.big-text-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Content */
+.main-container-home {
     position: relative;
+
+    align-items: center;
+    background-color: transparent;
+    z-index: 10;
+    margin-top: 100dvh;
+    /* Asegura que inicie después de la intro */
+    min-height: 100dvh;
+    /* Espacio suficiente para probar el scroll */
+
+}
+
+.home_intro-section {
+    padding-top: var(--gap-large);
+    width: 100%;
+    height: 100dvh;
+    text-align: center;
+    background-color: var(--color-background);
+    margin-bottom: var(--gap-large);
 }
 
 .home_logo {
@@ -91,15 +176,14 @@ body {
     display: block;
 }
 
-.home_intro-section {
-    margin-bottom: var(--gap-large);
-}
 
 .home_title {
+    font-size: 2rem;
     color: var(--color-primary);
 }
 
 .home_text {
+    font-size: 1.2rem;
     color: var(--color-secondary);
 }
 
@@ -145,14 +229,14 @@ body {
 }
 
 .explore-description_title {
-    font-size:var(--font-size-xxl);
+    font-size: var(--font-size-xxl);
     font-weight: bold;
     color: var(--color-text);
 }
 
 .explore-description_subtitle {
     font-family: var(--font-handwriting);
-    font-size:var( --font-size-xl);
+    font-size: var(--font-size-xl);
     color: var(--color-text);
 }
 
@@ -202,7 +286,7 @@ body {
 }
 
 .explore-description_latin-name {
-    font-size:var(--font-size-xxl);
+    font-size: var(--font-size-xxl);
     font-style: italic;
     color: var(--color-text);
     text-align: center;
@@ -234,7 +318,7 @@ body {
     border-radius: 50%;
     background-color: var(--color-primary);
     overflow: hidden;
-    cursor: url(/assets/images/cursor_2.svg)16 16, auto;
+    cursor: pointer;
 }
 
 .explore_button:hover {
@@ -266,14 +350,14 @@ body {
     font-family: var(--font-main);
     color: var(--color-textlight);
     text-transform: uppercase;
-    font-size:var(--font-size-small);
+    font-size: var(--font-size-small);
     opacity: 1;
     transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .explore_instruction {
     text-align: center;
-    font-size:var(--font-size-large);
+    font-size: var(--font-size-large);
     color: var(--color-text);
     margin: var(--gap-medium);
     font-family: var(--font-handwriting);
@@ -297,36 +381,36 @@ body {
 
 
 .plant_title {
-    font-size:var(--font-size-xxl);
+    font-size: var(--font-size-xxl);
     font-weight: bold;
     color: var(--color-primary);
 }
 
 .plant_latin-name {
     font-family: var(--font-secondary);
-    font-size:var(--font-size-large);
+    font-size: var(--font-size-large);
     font-style: italic;
     color: var(--color-secondary);
 }
 
 .plant_family-name {
     font-weight: normal;
-    font-size:var(--font-size-xxl);
+    font-size: var(--font-size-xxl);
     font-family: var(--font-handwriting);
     color: var(--color-text);
 }
 
 .plant_description {
-   line-height: var( --line-height-large);
+    line-height: var(--line-height-large);
     color: var(--color-text);
     margin-bottom: var(--gap-medium)
 }
 
 .CTA {
-    font-size:var(--font-size-large);
+    font-size: var(--font-size-large);
     text-align: center;
     font-weight: bolder;
-   line-height: var( --line-height-large);
+    line-height: var(--line-height-large);
     color: var(--color-secondary);
     margin-top: var(--gap-large);
     margin-bottom: var(--gap-large);
@@ -368,13 +452,13 @@ body {
 }
 
 .plant_visual-title {
-    font-size: var(--font-size-xxxl);
+    font-size: 3.5rem;
     font-family: var(--font-secondary);
     color: var(--color-primary);
     text-transform: uppercase;
     position: absolute;
-    top:0;
-    right:1rem;     
+    top: -1.5rem;
+    right: 1rem;
 }
 
 .plant_visual-box {
@@ -431,7 +515,7 @@ body {
     font-family: var(--font-main);
     color: var(--color-primary);
     text-decoration: none;
-    font-size:var( --font-size-xl);
+    font-size: var(--font-size-xl);
     display: flex;
     align-items: center;
     gap: var(--gap-small);
@@ -482,7 +566,7 @@ body {
 }
 
 .plant_anatomy-instruction {
-    font-size:var( --font-size-xl);
+    font-size: var(--font-size-xl);
     font-family: var(--font-handwriting);
     color: var(--color-secondary);
     margin-bottom: var(--gap-large);
@@ -514,22 +598,22 @@ body {
 
 
 #plant_anatomy-leaf {
-    top: 10rem;
+    top: 15rem;
     left: 15rem;
 }
 
 #plant_anatomy-stem {
-    top: 20rem;
+    top: 25rem;
     left: 15rem;
 }
 
 #plant_anatomy-soil {
-    bottom: 20rem;
+    bottom: 25rem;
     right: 15rem;
 }
 
 #plant_anatomy-seed {
-    bottom: 10rem;
+    bottom: 15rem;
     right: 15rem;
 }
 
@@ -539,12 +623,14 @@ body {
 }
 
 .plant_anatomy-item-title {
-    font-size:var( --font-size-xl);
+    display: flex;
+    font-size: var(--font-size-xl);
     font-weight: bold;
     font-family: var(--font-handwriting);
     color: var(--color-secondary);
     margin-bottom: var(--gap-small);
     text-align: center;
+    justify-content: center;
 }
 
 .plant_anatomy-item-text {
@@ -560,23 +646,38 @@ body {
     background-color: var(--color-highlight);
 }
 
+.bloom-tip-content {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-small);
+    margin-top: var(--gap-large);
+  }
+  
+  .bloom-tip-svg {
+    width: 1.2em;
+    height: 1.2em;
+    animation: blink 1.5s infinite;
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+  
+ 
 /* Proyecto */
 
 .main-container.project {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--padding-large) var(--padding-medium);
+    padding: 0 var(--padding-medium);
     gap: var(--gap-large);
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    
 }
 
 /* INTRODUCCIÓN */
 
 .project_intro {
     text-align: left;
-    max-width: 800px;
+    max-width: 80dvh;
     margin-bottom: var(--gap-large);
 }
 
@@ -602,7 +703,6 @@ body {
     border-left: 4px solid var(--color-primary);
     box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    max-width: 800px;
 }
 
 .project_subtitle {
@@ -670,22 +770,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    padding: var(--padding-large);
-    margin: var(--gap-large) 0;
+    width: 100vw;
+    margin: 0;
+    padding: var(--padding-large) 0;
     text-align: center;
-    border-top: 2px solid var(--color-primary); /* Línea decorativa */
-    border-bottom: 2px solid var(--color-primary); /* Línea decorativa */
 
-    border: 2px solid red; /* Para pruebas */
+    background: var(--color-primary);
 }
 
 .cta_box {
     text-align: center;
     padding: var(--padding-medium);
-    background: var(--color-primary);
+
     color: var(--color-textlight);
     border-radius: var(--radius-small);
+    max-width: 1200px;
+    /* Ancho máximo del contenido */
+    width: 100%;
+    /* Ajusta el contenido al contenedor */
 }
 
 .cta_title {
@@ -693,18 +795,7 @@ body {
     margin-bottom: var(--gap-medium);
 }
 
-
-[data-scroll="fade-in"] {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-[data-scroll="fade-in"].active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* CARRUSEL DE PLANTAS */
 .plant-carousel {
     margin-top: 2rem;
     text-align: center;
@@ -743,7 +834,7 @@ body {
 
 .carousel-button {
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-highlight);
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
@@ -763,6 +854,18 @@ body {
 }
 
 .carousel-button:disabled {
-    background-color:var(--color-highlight);
+    background-color: var(--color-highlight);
     cursor: not-allowed;
+}
+
+/* ANIMACIONES DE DESPLAZAMIENTO */
+[data-scroll="fade-in"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-scroll="fade-in"].active {
+    opacity: 1;
+    transform: translateY(0);
 }

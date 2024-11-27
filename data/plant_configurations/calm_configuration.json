@@ -1,6 +1,6 @@
 {
     "name": "nombre de planta",
-    "number_plants": 2,
+    "number_plants": 3,
     "min_separation": 50,
     "global": {
         "components": ["root", "background", "seed", "soil"],
