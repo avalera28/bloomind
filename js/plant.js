@@ -83,6 +83,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
     }
+
+
+    const emotionButtons = document.querySelectorAll('.explore_button');
+    const buttonGroup = document.querySelector('.explore_button-group');
+    // Mostrar descripción y animación al pasar el mouse sobre un botón de emoción
+
+    gsap.fromTo(
+        buttonGroup,
+        { scale: 0 },
+        { scale: 1, duration: 1.5, delay: 1.5 }
+
+    )
+    emotionButtons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+
+            // Reposicionar los botones
+            buttonGroup.classList.add('active');
+
+            const emotion = button.getAttribute('data-emotion');
+            const emotionInfo = emotions[emotion];
+
+            // Cambiar el color de la mitad superior
+            button.style.setProperty('--color-emotion-hover', emotionInfo.color);
+
+        });
+
+
+        // Al hacer clic en una emoción, almacenar los datos y redirigir a la página de generación de la planta
+        button.addEventListener('click', () => {
+            const emotion = button.getAttribute('data-emotion');
+            const emotionInfo = emotions[emotion];
+
+            localStorage.setItem("plant_source", emotions[emotion].emotion);
+            localStorage.setItem("emotionKey", emotions[emotion].key)
+            window.location.href = emotionInfo.location;
+        });
+    });
+
+
+    const bloomElement = document.querySelector(".bloom-tip-content");
+    const bloomText = document.querySelector(".plant_anatomy-bloom-tip div");
+
+    console.log("bloomText", bloomText);
+    
+    gsap.set(bloomText, {opacity: 0});
+   
+    
+    bloomElement.addEventListener('click', () => {
+        gsap.to(bloomText, {opacity: 1, duration: 2});
+    })
     
 });
 

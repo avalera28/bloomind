@@ -15,7 +15,8 @@
             "components": {
                 "stem": {
                     "grow_duration": 3,
-                    "grow_delay": 0
+                    "grow_delay": 0,
+                    "animation_strategy": "opacity"
                 },
                 "leaf": {
                     "grow_duration": 2,
@@ -44,7 +45,8 @@
             "components": {
                 "stem": {
                     "grow_duration": 3,
-                    "grow_delay": 0
+                    "grow_delay": 0,
+                    "animation_strategy": "opacity"
                 },
                 "leaf": {
                     "grow_duration": 2,
@@ -73,7 +75,8 @@
             "components": {
                 "stem": {
                     "grow_duration": 3,
-                    "grow_delay": 0
+                    "grow_delay": 0,
+                    "animation_strategy": "opacity"
                 },
                 "leaf": {
                     "grow_duration": 2,
@@ -102,7 +105,8 @@
             "components": {
                 "stem": {
                     "grow_duration": 3,
-                    "grow_delay": 0
+                    "grow_delay": 0,
+                    "animation_strategy": "opacity"
                 },
                 "leaf": {
                     "grow_duration": 2,

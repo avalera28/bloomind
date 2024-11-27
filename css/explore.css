@@ -1,0 +1,432 @@
+/* Estilos base para móvil - Header y navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-small);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: var(--color-background);
+    height: 4rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_logo {
+    height: 2.5rem;
+}
+
+.header_nav {
+    display: none; /* Oculto en móvil */
+}
+
+.header_link {
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-left: var(--gap-small);
+    font-size: var(--font-size-base);
+}
+
+.header_link--active {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+/* Menú hamburguesa */
+.hamburger-menu {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 20;
+}
+
+.hamburger-menu svg {
+    fill: var(--color-secondary);
+    width: 24px;
+    height: 24px;
+}
+
+/* Menú móvil */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 19;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu .header_link {
+    color: var(--color-textlight);
+    font-size: var(--font-size-base);
+    padding: 1rem;
+    width: 100%;
+    text-align: right;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.mobile-menu .header_link:hover {
+    color: var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .header_link--active {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Estilos base para móvil - Página Explorar */
+
+/* Contenedor principal */
+/* Estilos base para explorar */
+.main-container.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 80dvh;
+    margin-top: 4rem;
+    padding: 0 var(--padding-small);
+}
+
+/* Sección de introducción */
+.explore.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-small);
+    text-align: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.explore_title {
+    opacity: 0;
+    font-size: var(--font-size-large);
+    text-align: center;
+    margin-bottom: var(--gap-medium);
+}
+
+.explore_instruction {
+    text-align: center;
+    font-size: var(--font-size-large);
+    color: var(--color-text);
+    margin: var(--gap-medium);
+    font-family: var(--font-handwriting);
+    opacity: 0;
+}
+
+/* Contenedor de descripción */
+.explore_description-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-highlight);
+    box-shadow: var(--box-shadow);
+    padding: var(--padding-small);
+    margin: var(--gap-medium) auto;
+    gap: var(--gap-medium);
+    min-height: 20rem;
+    opacity: 0;
+}
+.explore_description-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-highlight);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-small);
+    width: 100%;
+    padding: var(--padding-small);
+    margin: var(--gap-medium) auto;
+    gap: var(--gap-medium);
+}
+
+/* Encabezado descripción */
+.explore-description_header {
+    width: 100%;
+    text-align: center;
+}
+
+.explore-description_title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--gap-small);
+}
+
+.explore-description_subtitle {
+    font-size: var(--font-size-large);
+    color: var(--color-secondary);
+}
+
+.explore-description_line {
+    height: 1px;
+    background-color: var(--color-primary);
+    margin: var(--gap-small) 0;
+    width: 100%;
+}
+
+/* Contenido descripción */
+.explore-description_content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    align-items: center;
+}
+
+.explore-description_image-container {
+    width: 12rem;
+    height: 12rem;
+}
+
+.explore_description {
+    text-align: center;
+    padding: 0 var(--padding-small);
+}
+
+/* Barra lateral */
+.explore-description_side {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-top: var(--gap-medium);
+    border-top: 1px solid var(--color-primary);
+}
+
+.explore-description_latin-name {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: var(--font-size-xl);
+}
+
+.explore-description_line-side {
+    display: none;
+}
+
+/* Grupo de botones */
+.explore_button-group {
+    display: none; /* Oculto en móvil */
+}
+
+.explore_button-group-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-small);
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 var(--padding-small);
+}
+
+.emotion-button {
+    background-color: var(--color-primary);
+    color: var(--color-textlight);
+    padding: var(--padding-small);
+    border: none;
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+}
+
+.emotion-button:hover,
+.emotion-button.active {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+/* Estilos para los botones circulares */
+.explore_button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.explore_button:hover {
+    transform: scale(1.2);
+}
+
+.explore_button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.explore_button:hover::before,
+.explore_button.active::before {
+    background-color: var(--color-emotion-hover);
+}
+
+.explore_button-label {
+    position: absolute;
+    bottom: 3.5rem;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-family: var(--font-main);
+    color: var(--color-textlight);
+    text-transform: uppercase;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Media Queries unificados */
+@media (min-width: 768px) {
+    /* Header y navegación */
+    .header {
+        height: 4.5rem;
+        padding: var(--padding-small) var(--padding-medium);
+    }
+
+    .header_logo {
+        height: 3rem;
+    }
+
+    .header_nav {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    /* Estilos existentes para tablet */
+    .explore_description-container {
+        flex-direction: row;
+        padding: var(--padding-medium);
+        max-width: 80%;
+    }
+
+    .explore-description_header {
+        text-align: left;
+    }
+
+    .explore-description_content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .explore_description {
+        text-align: left;
+    }
+
+    .explore-description_side {
+        flex-direction: column;
+        border-top: none;
+        padding-top: 0;
+        border-left: 1px solid var(--color-primary);
+        padding-left: var(--gap-medium);
+    }
+
+    .explore-description_latin-name {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    .explore_button-group-mobile {
+        display: none; /* Ocultar botones móviles */
+    }
+
+    .explore_button-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--gap-medium);
+        padding: 2rem;
+        opacity: 1;
+    }
+
+    .explore_button {
+        width: 110px; /* Tamaño ligeramente más pequeño en tablet */
+        height: 110px;
+    }
+
+    .explore_button-label {
+        bottom: 3rem;
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Header y navegación */
+    .header {
+        height: 5rem;
+    }
+
+    .header_link {
+        font-size: var(--font-size-large);
+        margin-left: var(--gap-medium);
+    }
+
+    /* Estilos existentes para desktop */
+    .explore_button-group-mobile {
+        display: none;
+    }
+
+    .explore_button-group {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--gap-large);
+    }
+
+    .explore_description-container {
+        max-width: 60%;
+    }
+
+    .explore-description_image-container {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .explore_button {
+        width: 120px; /* Tamaño más grande en desktop */
+        height: 120px;
+    }
+
+    .explore_button-label {
+        bottom: 3.5rem;
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .explore_button-group-mobile {
+        grid-template-columns: 1fr;
+    }
+}

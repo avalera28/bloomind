@@ -204,6 +204,13 @@ function createElementAnimation(configuration, timeline, type, element) {
     switch (type) {
         case "stem":
             timeline.to("#empty0", { opacity: 0, duration: growDuration }, `start+=${growDelay}`)
+            if(animationStrategy === "opacity"){
+                for(const innerElement of element.children){
+                    animatePlantComponent(innerElement, timeline, growDuration, growDelay, animationStrategy);
+                }
+                
+                break;
+            }
             animateTrails(element, timeline, growDuration, growDelay);
             break;
         case "leaf":
