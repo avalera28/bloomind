@@ -122,8 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    
     const bloomElement = document.querySelector(".bloom-tip-content");
-    const bloomText = document.querySelector(".plant_anatomy-bloom-tip div");
+    const bloomText = document.querySelector(".plant_anatomy-bloom-tip .plant_anatomy-item-text");
 
     console.log("bloomText", bloomText);
     

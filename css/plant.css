@@ -1,11 +1,17 @@
 
 
 /* Página de generar planta */
+.main-container.plant {
+    padding: var(--padding-medium)
+  }
+
 .plant_generation {
     display: flex;
     justify-content: space-between;
     gap: var(--gap-large);
     padding: var(--padding-medium);
+
+   flex-direction: column; 
 }
 
 .plant_column {
@@ -43,13 +49,14 @@
 }
 
 .CTA {
-    font-size: var(--font-size-large);
+    display: none;
+/*     font-size: var(--font-size-large);
     text-align: center;
     font-weight: bolder;
     line-height: var(--line-height-large);
     color: var(--color-secondary);
     margin-top: var(--gap-large);
-    margin-bottom: var(--gap-large);
+    margin-bottom: var(--gap-large); */
 }
 
 .plant_generation .CTA {
@@ -82,35 +89,41 @@
 }
 
 .plant_right-visual {
-    display: flex;
+    /* display: flex; */
+    display: none;  
     flex-direction: column;
     gap: var(--gap-item);
 }
 
 .plant_visual-title {
-    font-size: 3.5rem;
+    display: none;
+   /*   font-size: 3.5rem; 
+   font-size: var(--font-size-xxl);
     font-family: var(--font-secondary);
     color: var(--color-primary);
     text-transform: uppercase;
     position: absolute;
     top: -1.5rem;
-    right: 1rem;
+    /* right: 1rem; */ 
 }
 
 .plant_visual-box {
-    background-color: var(--color-highlight);
+    display: none;
+  /*   background-color: var(--color-highlight);
     border: 1px solid var(--color-primary);
     border-bottom: 0.8rem solid #C7B299;
     width: 100%;
     font-size: 1rem;
-    margin-top: var(--gap-item);
+    margin-top: var(--gap-item); */
 }
 
 /* Detalles */
 .plant_details {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap-item);
+    grid-template-columns:1fr;
+/*     grid-template-columns: repeat(3, 1fr); */
+  /*   gap: var(--gap-item); */
+  gap: var(--gap-large);
 }
 
 .plant_details-item {
@@ -121,11 +134,17 @@
 
 .plant_details-title {
     color: var(--color-primary);
+    font-weight: bold;
+}
+
+.plant_details-title span{
+    font-weight: normal;
 }
 
 .plant_details-content {
     display: flex;
     align-items: center;
+
 }
 
 .plant_details-content p {
@@ -148,14 +167,19 @@
 
 /*Enlace a Anatomia de la planta */
 .anatomy_link {
-    font-family: var(--font-main);
+    display: none;
+/*     font-family: var(--font-main);
     color: var(--color-primary);
     text-decoration: none;
     font-size: var(--font-size-xl);
     display: flex;
     align-items: center;
     gap: var(--gap-small);
-    position: relative;
+    position: relative; */
+}
+
+.plant_anatomy-img{
+    transform: scale(10);
 }
 
 .anatomy_link:hover {
@@ -194,7 +218,8 @@
 }
 
 .plant_anatomy-title {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xl);
+   /*  font-size: var(--font-size-xxxl); */
     font-weight: normal;
     color: var(--color-text);
     text-align: center;
@@ -202,60 +227,92 @@
 }
 
 .plant_anatomy-instruction {
-    font-size: var(--font-size-xl);
+    display: none;
+/*     font-size: var(--font-size-xl);
     font-family: var(--font-handwriting);
     color: var(--color-secondary);
     margin-bottom: var(--gap-large);
-    text-align: center;
+    text-align: center; */
 }
 
 .plant_anatomy-content {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap-item);
-    justify-content: space-between;
+ /*    gap: var(--gap-item); */
+ /*    justify-content: space-between; */
     align-items: flex-start;
 }
 
 
 /* Elementos individuales */
 .plant_anatomy-item {
-    opacity: 0;
-    position: absolute;
+  /*   opacity: 0;
+    position: absolute; */
     padding: var(--gap-small);
-    max-width: 20%;
+/*     max-width: 20%; */
+max-width: 100%;
+
+    
 }
 
 #plant_anatomy-flower {
     top: 2rem;
     left: 15rem;
+    /* Solo mobile */
+    border-top: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    
 }
 
 
 #plant_anatomy-leaf {
     top: 15rem;
     left: 15rem;
+    /* Solo mobile */
+    border-top: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    
 }
 
 #plant_anatomy-stem {
     top: 25rem;
     left: 15rem;
+    /* Solo mobile */
+    border-top: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    
 }
 
 #plant_anatomy-soil {
     bottom: 25rem;
     right: 15rem;
+    /* Solo mobile */
+    border-bottom: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    
 }
 
 #plant_anatomy-seed {
     bottom: 15rem;
     right: 15rem;
+    /* Solo mobile */
+    border-bottom: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
 }
 
 #plant_anatomy-root {
     bottom: 2rem;
     right: 15rem;
+    /* Solo mobile */
+    border-bottom: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
 }
 
 .plant_anatomy-item-title {
@@ -276,10 +333,24 @@
 /* Visual central */
 .plant_anatomy-visual {
     margin: auto;
-    width: 80%;
+    /* width: 80%; */
+    width: 100dvh;
+    height: 100dvh;
     padding: var(--gap-medium);
     box-shadow: var(--box-shadow);
     background-color: var(--color-highlight);
+    overflow: hidden;
+/*solo en mobile*/
+    border: 1px solid var(--color-primary);
+}
+
+.plant_anatomy-visual svg {
+    margin: auto;
+    /* width: 80%; */
+
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5) translateY(-20px);
 }
 
 .bloom-tip-content {
@@ -289,6 +360,15 @@
     margin-top: var(--gap-large);
     cursor: pointer;
   }
+
+  .plant_anatomy-bloom-tip {
+    .plant_anatomy-item-text{
+        opacity: 0;
+    }
+    
+  }
+
+
   
   .bloom-tip-svg {
     width: 1.2em;
