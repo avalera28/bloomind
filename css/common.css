@@ -1,0 +1,96 @@
+/* ESTILOS GENERALES */
+
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-medium);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-medium) 0;
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 80dvh;
+    margin-top: 5rem;
+
+}
+
+/* Encabezado */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-small) var(--padding-medium);
+    position: fixed; /* Fijo en todas las páginas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: var(--color-background); /* Fondo por defecto */
+    height: 5rem; /* Altura fija */
+}
+
+
+
+.header_logo {
+    height: 3rem;
+}
+
+.header_link {
+    font-family: var(--font-main);
+    color: var(--color-primary); /* Color por defecto */
+    text-decoration: none;
+    margin-left: var(--gap-medium);
+    font-size: var(--font-size-large);
+}
+
+.header_link--active {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+
+/* Estilos generales para secciones introductorias */
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-medium);
+    text-align: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.intro-section_title {
+    font-size: var(--font-size-xxxl);
+    margin-bottom: var(--gap-large);
+}
+
+.intro-section_text {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--gap-large);
+}
+
+.general_button {
+    background-color: var(--color-primary);
+    color: var(--btn-text-color);
+    padding: var(--gap-small) var(--gap-medium);
+    border: none;
+    border-radius: var(--radius-small);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.general_button:hover {
+    background-color: var(--btn-bg-hover);
+}
