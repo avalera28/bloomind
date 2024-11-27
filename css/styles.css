@@ -1,5 +1,6 @@
 /* ESTILOS GENERALES */
 
+@media (min-width: 1024px) {
 body {
     font-family: var(--font-main);
     background-color: var(--color-background);
@@ -868,4 +869,4 @@ body {
 [data-scroll="fade-in"].active {
     opacity: 1;
     transform: translateY(0);
-}
+} } 
