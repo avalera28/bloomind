@@ -1,25 +1,49 @@
-# Bloomind: Un Jardín Interactivo de Emociones
+# Bloomind 🌸
 
-Bloomind es una experiencia digital interactiva que combina diseño y tecnología para explorar las emociones humanas. Inspirado en la estética de un cuaderno botánico, este proyecto permite a los usuarios cultivar su propio jardín virtual, donde cada planta representa una emoción única: Esperanza, Alegría, Calma, Tristeza, Rabia y Ansiedad.
+*Bloomind* es un proyecto digital interactivo que invita a los usuarios a explorar y reflexionar sobre sus emociones a través de la metáfora de un jardín virtual. Cada planta del jardín simboliza una emoción única, creando un espacio donde la introspección, la creatividad y la tecnología convergen.
 
-## Características principales:
+---
 
-Diseño minimalista con la tipografía Lato y una paleta de colores suaves.
+## 🎯 Objetivo del Proyecto
 
-Interacciones intuitivas que invitan a reflexionar sobre las emociones de manera visual y simbólica.
+El propósito de *Bloomind* es ofrecer una experiencia visual y simbólica para ayudar a las personas a:
+- Comprender y reconocer sus emociones.
+- Fomentar la introspección en un entorno digital interactivo.
+- Disfrutar de una experiencia que combina arte, naturaleza y tecnología.
 
-Una atmósfera inmersiva que fusiona naturaleza y tecnología.
+---
 
+## 🌱 Características Principales
 
-Objetivo: Bloomind busca ser una herramienta creativa y terapéutica para fomentar la introspección y la conexión emocional a través de un entorno digital innovador.
+- *Representación emocional:* Cada planta refleja una emoción:  
+  - Esperanza 🌱  
+  - Alegría 🌼  
+  - Calma 🌸  
+  - Tristeza 🌧️  
+  - Rabia 🔥  
+  - Ansiedad 🌪️  
 
-## Tecnologías utilizadas:
+- *Diseño único:* Inspirado en un cuaderno botánico, con elementos visuales minimalistas y tipografía *Lato*.  
+- *Interacciones intuitivas:* Los usuarios pueden explorar emociones a través de interacciones simples y fluidas.  
+- *Experiencia inmersiva:* Uso de colores, formas y animaciones suaves para una navegación envolvente.  
 
-HTML, CSS y JavaScript para el desarrollo front-end.
+---
 
-Diseño basado en wireframes y prototipos iterativos.
+## 🚀 Tecnologías Utilizadas
 
-Inspiración visual tomada de la obra Flora de Adam G.
+- *HTML5*: Para la estructura de la página.  
+- *CSS3*: Para el diseño visual, incluyendo animaciones y estilos minimalistas.  
+- *JavaScript*: Para la interactividad del proyecto.  
+- *Inspiración visual:* Basada en el estilo de Flora de Adam G.
 
+---
 
-Estado del proyecto: Actualmente en desarrollo como proyecto final de un máster en programación creativa, con un enfoque en usabilidad, diseño visual y experiencia interactiva
+## 🗂️ Estructura del Proyecto
+
+```plaintext
+📂 bloomind
+├── 📁 assets           # Recursos (imágenes, íconos, etc.)
+├── 📁 css              # Archivos de estilos
+├── 📁 js               # Scripts de JavaScript
+├── 📄 index.html       # Página principal
+└── 📄 README.md        # Este archivo
