@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
   createHamburgerMenu();
 
   const links = document.querySelectorAll('.header_link');
@@ -12,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Función para detectar Safari
+  const isSafari = () => {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  };
+
   // Lógica del carrusel
   const track = document.querySelector(".carousel-track");
   if (track) {
@@ -20,11 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.querySelector(".carousel-button.next");
 
     if (items.length > 0) {
-      const itemWidth = items[0].offsetWidth + 16; // Ajustar según el margen entre items
+      const itemWidth = items[0].offsetWidth + 16; 
       let position = 0;
 
       const updateTrackPosition = () => {
-        track.style.transform = `translateX(-${position * itemWidth}px)`;
+        // Safari necesita prefijo para transform
+        const transformValue = `translateX(-${position * itemWidth}px)`;
+        track.style.transform = transformValue;
+        if (isSafari()) {
+          track.style.webkitTransform = transformValue; // Prefijo para Safari
+        }
       };
 
       prevButton.addEventListener("click", () => {
@@ -58,6 +67,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-
-
-
