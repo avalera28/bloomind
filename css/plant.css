@@ -407,37 +407,37 @@
 
     #plant_anatomy-flower {
         top: 2rem;
-        left: 10rem;
+        left: 13rem;
         border: none;
     }
 
     #plant_anatomy-leaf {
         top: 15rem;
-        left: 10rem;
+        left: 13rem;
         border: none;
     }
 
     #plant_anatomy-stem {
         top: 28rem;
-        left: 10rem;
+        left: 13rem;
         border: none;
     }
 
     #plant_anatomy-soil {
         bottom: 25rem;
-        right: 10rem;
+        right: 13rem;
         border: none;
     }
 
     #plant_anatomy-seed {
         bottom: 15rem;
-        right: 10rem;
+        right: 13rem;
         border: none;
     }
 
     #plant_anatomy-root {
         bottom: 2rem;
-        right: 10rem;
+        right: 13rem;
         border: none;
     }
 
