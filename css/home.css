@@ -99,7 +99,9 @@
 }
 
 /* Media Queries agrupados */
-@media (max-width: 768px) {
+
+@media (min-width: 768px) {
+
     .hamburger-menu {
         display: none;
     }
@@ -107,9 +109,6 @@
     .header_nav {
         display: block;
     }
-}
-
-@media (min-width: 768px) {
     /* Header */
     .home-page .header {
         height: 4.5rem;

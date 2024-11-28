@@ -115,6 +115,7 @@ function createHamburgerMenu() {
 
     hamburger.addEventListener("click", toggleMenu);
 
+
     // Cerrar menú al hacer click fuera
     document.addEventListener('click', (e) => {
         if (menu.classList.contains("show") &&
