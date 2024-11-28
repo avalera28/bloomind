@@ -1,8 +1,4 @@
 
-.explore_button-group-mobile {
-    display: none;
-}
-
 /* Página de explorar emociones */
 
 .text-box {
@@ -121,6 +117,8 @@
     gap: 1rem;
     padding: 2rem;
     transform: scale(0);
+    /* only mobile*/
+    display: none;
 }
 
 .explore_button {
@@ -135,6 +133,29 @@
 
 .explore_button:hover {
     transform: scale(1.2);
+}
+
+/*Grupo de botones pequeños*/
+
+.explore_button-group-small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-small);
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 var(--padding-small);
+}
+
+.emotion-button {
+    background-color: var(--color-secondary);
+    color: var(--color-textlight);
+    padding: var(--padding-small);
+    border: none;
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+
 }
 
 /* Relleno superior del botón */

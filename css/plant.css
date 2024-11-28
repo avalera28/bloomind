@@ -376,3 +376,28 @@ max-width: 100%;
     animation: blink 1.5s infinite;
     transition: transform 0.3s ease, fill 0.3s ease;
   }
+
+  /*Grupo de botones pequeños*/
+
+.explore_button-group-small {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-small);
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 var(--padding-small);
+}
+
+.emotion-button {
+    background-color: var(--color-secondary);
+    color: var(--color-textlight);
+    padding: var(--padding-small);
+    border: none;
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-base);
+    transition: all 0.3s ease;
+
+}
+
+

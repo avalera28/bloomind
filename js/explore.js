@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    createHamburgerMenu();
+    
     // Resaltar el enlace activo en el encabezado
     const links = document.querySelectorAll('.header_link');
     const currentPage = window.location.pathname.replace("/", "");
@@ -19,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const descriptionContainer = document.querySelector('.explore_description-container');
     const emotionButtons = document.querySelectorAll('.explore_button');
     const buttonGroup = document.querySelector('.explore_button-group');
+
+    // Botones de mobile
+    const smallEmotionButtons = document.querySelectorAll('.explore_button-group-small .emotion-button');
+
     const exploreInstruction = document.querySelector('.explore_instruction');
 
     let cardActive = false;
@@ -95,6 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    smallEmotionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const emotion = button.getAttribute('data-emotion');
+            const emotionInfo = emotions[emotion];
+
+            localStorage.setItem("plant_source", emotions[emotion].emotion);
+            localStorage.setItem("emotionKey", emotions[emotion].key)
+            window.location.href = emotionInfo.location;
+        });
+    })
+    
 
 
 

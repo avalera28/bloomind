@@ -2,6 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    createHamburgerMenu();
+
     const anchorLink = document.querySelector(".anatomy_link");
     anchorLink.addEventListener('click', () => {
         anatomyPlantTimeline.play();
@@ -87,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const emotionButtons = document.querySelectorAll('.explore_button');
     const buttonGroup = document.querySelector('.explore_button-group');
+
+    const smallEmotionButtons = document.querySelectorAll('.explore_button-group-small .emotion-button');
     // Mostrar descripción y animación al pasar el mouse sobre un botón de emoción
 
     gsap.fromTo(
@@ -126,13 +131,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const bloomElement = document.querySelector(".bloom-tip-content");
     const bloomText = document.querySelector(".plant_anatomy-bloom-tip .plant_anatomy-item-text");
 
-    console.log("bloomText", bloomText);
     
     gsap.set(bloomText, {opacity: 0});
    
     
     bloomElement.addEventListener('click', () => {
         gsap.to(bloomText, {opacity: 1, duration: 2});
+    })
+
+    smallEmotionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const emotion = button.getAttribute('data-emotion');
+            const emotionInfo = emotions[emotion];
+
+            localStorage.setItem("plant_source", emotions[emotion].emotion);
+            localStorage.setItem("emotionKey", emotions[emotion].key)
+            window.location.href = emotionInfo.location;
+        });
     })
     
 });

@@ -22,6 +22,60 @@ body {
 
 }
 
+/* Estilos para el menú móvil */
+.mobile-menu {
+    display: block;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    z-index: 19;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 1;
+    transform: translateY(0);
+    background-color: var(--color-background);
+}
+
+.mobile-menu .header_link {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    padding: 1rem;
+    width: 100%;
+    text-align: right;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+
+.mobile-menu .header_link--active {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Estilos para el botón hamburguesa */
+.hamburger-menu {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 20;
+}
+
+.hamburger-menu svg {
+      width: 24px;
+    height: 24px;
+}
+
+
 /* Encabezado */
 
 .header {
@@ -38,6 +92,7 @@ body {
     height: 5rem; /* Altura fija */
 }
 
+.header nav{display: none;}
 
 
 .header_logo {
@@ -94,3 +149,4 @@ body {
 .general_button:hover {
     background-color: var(--btn-bg-hover);
 }
+
