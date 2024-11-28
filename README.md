@@ -47,3 +47,39 @@ El propósito de *Bloomind* es ofrecer una experiencia visual y simbólica para 
 ├── 📁 js               # Scripts de JavaScript
 ├── 📄 index.html       # Página principal
 └── 📄 README.md        # Este archivo
+```
+
+---
+
+## ✨ Futuras Funcionalidades
+
+Agregar más emociones representadas por plantas únicas.
+
+Incorporar sonidos ambientales para una experiencia sensorial más completa.
+
+Permitir a los usuarios guardar y personalizar su propio jardín.
+
+
+
+---
+
+## 🖌️ Inspiración
+
+Este proyecto toma inspiración de la relación entre la naturaleza y la introspección emocional, así como del diseño botánico en obras artísticas como Flora de Adam G.
+
+
+---
+
+## 🛠️ Contribuciones
+
+¡Las contribuciones son bienvenidas! Si tienes ideas o sugerencias, no dudes en abrir un issue o hacer un pull request.
+
+
+---
+
+---
+
+🧑‍💻 Autor
+
+Ana
+[LinkedIn](https://www.linkedin.com/in/anamariavalera/) | [GitHub](https://github.com/avalera28)
