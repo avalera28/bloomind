@@ -5,11 +5,13 @@ const ns = "http://www.w3.org/2000/svg";
 
 let globalConfig = {}
 
+// Evento a emitir cuando las plantas y animaciones son añadidas al documento
 const plantsGeneratedEvent = new Event("plants_generated");
 
 
 const emotion = localStorage.getItem("emotionKey");
 
+// Timelines principales de las animaciones
 const gardenTimeline = gsap.timeline();
 gardenTimeline.addLabel("start", 0);
 gardenTimeline.pause();
@@ -20,6 +22,7 @@ anatomyPlantTimeline.pause();
 
 let timelines = [];
 
+// Mapa auxiliar para traducir distintos ids
 const mapTypeName = {
     "stem": "stem",
     "flower": "flower",
@@ -38,6 +41,7 @@ const mapTypeName = {
     "fondo": "background"
 }
 
+// Lectura de el archivo de configuraciones segun la emocion
 function loadPlantTypeConfigurationFile(type) {
     const configuration = localStorage.getItem(`${type}_configuration`);
     if (configuration !== null) {
@@ -51,7 +55,6 @@ function loadPlantTypeConfigurationFile(type) {
         })
 }
 
-
 loadPlantTypeConfigurationFile(emotion)
     .then((configuration) => {
         return loadPlantTypeConfiguration(configuration);
@@ -59,6 +62,7 @@ loadPlantTypeConfigurationFile(emotion)
     .then((configuration) => generate(configuration))
 
 
+// Funcion para generar las plantas a partir de la configuracion
 function generate(configuration) {
     const numberOfPlants = configuration.number_plants;
     const minSeparation = configuration.min_separation;
@@ -76,6 +80,7 @@ function generate(configuration) {
     
 }
 
+// Funcion para generar una sola planta que es visible en la anatomia de la planta
 function generateSinglePlant(plantConfiguration, animateGlobalComponents, timeline) {
 
 
@@ -91,6 +96,7 @@ function generateSinglePlant(plantConfiguration, animateGlobalComponents, timeli
     svgGarden.dispatchEvent(plantsGeneratedEvent);
 }
 
+// Calculo aleatorio de las posiciones iniciales de las plantas
 function generateInitialPositions(minSeparation, garden) {
     let initialPositions = [];
     const viewBox = garden.viewBox.baseVal;
@@ -106,6 +112,7 @@ function generateInitialPositions(minSeparation, garden) {
 
 }
 
+// Genera una planta 
 function generatePlant(counter, initialPosition, configuration, garden, timeline, animateGlobalComponents = false) {
 
     const plantSuffix = `${configuration.name}_${counter}`
@@ -119,6 +126,7 @@ function generatePlant(counter, initialPosition, configuration, garden, timeline
 
 }
 
+// Sobreescribe la configuration de un componente. Es usado para componentes globales como semilla o suelo 
 function overrideConfiguration(configuration, group, animateGlobalComponents){
     const rawType = group.id;
     const type = mapTypeName[rawType.toLowerCase()];
@@ -142,6 +150,7 @@ function initPlantTimeline() {
     return gsap.timeline()
 }
 
+// Coloca la configuracion inicial de los elementos antes de la animacion
 function prepareElementForGrow(configuration, group) {
     const rawType = group.id;
     const type = mapTypeName[rawType.toLowerCase()];
@@ -175,6 +184,8 @@ function prepareElementForGrow(configuration, group) {
 
 }
 
+
+// Crea las animaciones de los grupos elementos
 function createElementGroupAnimation(configuration, group, timeline) {
     const rawType = group.id;
     const type = mapTypeName[rawType.toLowerCase()];
@@ -195,6 +206,7 @@ function createElementGroupAnimation(configuration, group, timeline) {
     timeline.add(plantTimeline, "start");
 }
 
+// Crea las animaciones de los elementos
 function createElementAnimation(configuration, timeline, type, element) {
 
     const growDuration = configuration.grow_duration;
@@ -241,8 +253,8 @@ function createElementAnimation(configuration, timeline, type, element) {
 }
 
 
-
-function animateTrails(stem, timeline, growDuration, growDelay) {   
+// Anima las raices y tallos que esta conformados por elementos admitidos por drawSVG  
+function animateTrails(stem, timeline, growDuration, growDelay) {
     timeline.from(stem.querySelectorAll("path,rect,ellipse,line,polyline"), {
         drawSVG: 0,
         duration: growDuration,
@@ -256,6 +268,7 @@ function animateTrails(stem, timeline, growDuration, growDelay) {
    
 }
 
+// Anima un componente siguiendo una estrategia dada
 function animatePlantComponent(component, timeline, growDuration, growDelay, animationStrategy) {
     switch (animationStrategy) {
         case "opacity":
@@ -271,6 +284,7 @@ function animatePlantComponent(component, timeline, growDuration, growDelay, ani
 
 }
 
+// Crea los elementos de la planta
 function createElements(configuration, plantSuffix, initialPosition, garden) {
     let plant = document.createElementNS(ns, "g");
     plant.setAttribute("id", plantSuffix);
@@ -295,6 +309,7 @@ function createElements(configuration, plantSuffix, initialPosition, garden) {
     return plant
 }
 
+// Inicia las propiedades iniciales de la planta
 function initTransformElements(configuration, plant, totalOffset) {
     let options = {
         x: totalOffset.x,
@@ -308,7 +323,7 @@ function initTransformElements(configuration, plant, totalOffset) {
 
 
 
-
+// Crea los elementos SVG
 function createSvgElement(parent, shape, suffix) {
     let element = document.createElementNS(ns, shape.type);
     setAttributes(element, shape.attr);

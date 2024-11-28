@@ -1,4 +1,4 @@
-// Inicializa las templates del archivo
+// Lee el archivo JSON de las configuraciones de las plantas
 function readJsonFile(path, field = "") {
     return fetch(path)
         .then(response => response.json())
@@ -10,32 +10,38 @@ function readJsonFile(path, field = "") {
         })
 }
 
+// Carga las configurationes por tipo de planta para una misma emocion
 function loadPlantTypeConfiguration(plantTypeconfiguration) {
     return loadPlantTypeShapes(plantTypeconfiguration);
 
 }
 
+// Construye las formas a partir de SVGs
 function loadPlantTypeShapes(plantTypeconfiguration) {
     let processes = [];
     for (const plant of plantTypeconfiguration.plants) {
         processes.push(populatePlantShapes(plant));
     }
+    // Las promesas son para expresar que la funcion terminara mas tarde
     return Promise.all(processes)
     .then(() => plantTypeconfiguration);
 }
 
+
+// Lee las formas dentro del SVG y las carga en un objeto JSON
 function populatePlantShapes(plant) {
     return parseSvg(plant["source"])
         .then((group) => includeShapesOnPlant(plant, group));
 }
 
-
+// Carga los archivos SVG
 function parseSvg(source) {
     return fetch(source)
         .then(response => response.text())
         .then(text => extractShapes(text, source))
 }
 
+// Lee el archivo SVG buscando los patrones de formas en el SVG
 function extractShapes(text, source) {
     const re = /<((?:path|circle|rect|ellipse|line|polyline|polygon|\/?g)[^>]*)\/?>/g;
     const rawShapes = text.matchAll(re);
@@ -69,6 +75,7 @@ function extractShapes(text, source) {
     return lastGroup;
 }
 
+// Construye los grupos de formas (g)
 function parseGroup(rawShape) {
     const rawAttr = rawShape.replaceAll(/ ([^= ]+)=/g, "%%%$1=");
     const attr = rawAttr.split("%%%");
@@ -87,6 +94,7 @@ function parseGroup(rawShape) {
 }
 
 
+// Construye las formas
 function parseShape(rawShape) {
     const rawAttr = rawShape.replaceAll(/ ([^= ]+)=/g, "%%%$1=").replaceAll("/","");
     const attr = rawAttr.split("%%%");
@@ -103,6 +111,7 @@ function parseShape(rawShape) {
     return shape;
 }
 
+// Añade las formas al objeto JSON final
 function includeShapesOnPlant(configuration, shapeGroup) {
     configuration.name = shapeGroup.name;
     configuration.shapes = shapeGroup.shapes;
