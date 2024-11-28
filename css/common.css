@@ -63,6 +63,11 @@ body {
 }
 
 /* Estilos para el botón hamburguesa */
+button.hamburger-menu {
+    background: transparent;
+    color: currentColor;
+}
+
 .hamburger-menu {
     border: none;
     cursor: pointer;
@@ -84,13 +89,13 @@ body {
     align-items: center;
     padding: var(--padding-small) var(--padding-medium);
     position: fixed;
-       top: 0;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 20;
     background-color: var(--color-background);
-        height: 4rem;
-   
+    height: 4rem;
+
 }
 
 .header nav {

@@ -146,7 +146,7 @@
 
 .plant_anatomy-item {
     padding: var(--gap-small);
-    max-width: 100%;
+    width: 100%;
 }
 
 #plant_anatomy-flower {
@@ -266,6 +266,7 @@
     border-radius: var(--radius-small);
     font-size: var(--font-size-base);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 
@@ -417,7 +418,7 @@
     }
 
     #plant_anatomy-stem {
-        top: 25rem;
+        top: 28rem;
         left: 10rem;
         border: none;
     }
